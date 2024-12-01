@@ -93,10 +93,10 @@
       margin-bottom: 20px;
     }
 
-    .hero button {
+    .hero a.call-button {
+      display: inline-block;
       background-color: var(--peach-dark);
       color: white;
-      border: none;
       padding: 10px 20px;
       border-radius: 30px;
       font-weight: bold;
@@ -104,7 +104,7 @@
       transition: background 0.3s ease;
     }
 
-    .hero button:hover {
+    .hero a.call-button:hover {
       background-color: var(--peach-main);
     }
 
@@ -139,6 +139,88 @@
       text-align: center;
       margin-bottom: 3rem;
       color: #4a5568;
+    }
+
+    /* Services Section */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .services .service {
+      background-color: var(--coral-medium);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .services .service:hover {
+      background-color: var(--coral-dark);
+    }
+
+    .services .service h3 {
+      font-size: 1.875rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .services .service p {
+      font-size: 1.125rem;
+      margin: 0;
+    }
+
+    /* Workshop Section */
+    .workshop {
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: var(--coral-medium);
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .workshop h2 {
+      font-size: 2.25rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .workshop p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .workshop p.highlight {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-top: 2rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .workshop .button-container {
+      text-align: center;
+    }
+
+    .workshop .button {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: var(--peach-dark);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .workshop .button:hover {
+      transform: scale(1.05);
+      background-color: var(--peach-main);
     }
 
     /* גלריה */
@@ -195,6 +277,7 @@
       cursor: pointer;
       text-align: center;
       transition: transform 0.2s ease, background-color 0.3s ease;
+      border: none;
     }
 
     .action-buttons a:hover, .action-buttons button:hover {
@@ -250,7 +333,7 @@
       <h1>גוף רכות לב</h1>
       <h2>טיפול רגשי דרך הגוף – יעל כהן</h2>
       <p>ברוכה הבאה. אם הגעת, כנראה שאת מוכנה לתהליך ריפוי. אני כאן להציע לך תמיכה והחלמה דרך חיבור לגוף.</p>
-      <button onclick="window.location.href='tel:0507688407'">לשיחת היכרות ראשונה</button>
+      <a href="tel:0507688407" class="call-button">לשיחת היכרות ראשונה</a>
     </div>
     <!-- גל SVG -->
     <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFF" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,186.7C672,160,768,128,864,138.7C960,149,1056,203,1152,202.7C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
@@ -285,6 +368,30 @@
     </div>
   </section>
 
+  <!-- Services Section -->
+  <section class="section">
+    <div class="container">
+      <h2>טיפול רגשי דרך הגוף</h2>
+      <div class="services">
+        <!-- שירות 1 -->
+        <div class="service">
+          <h3>חיבור מחדש</h3>
+          <p>הגוף שולח מסרים דרך תחושות. העבודה עם הגוף משחררת מתח, ומרגיעה את מערכת העצבים.</p>
+        </div>
+        <!-- שירות 2 -->
+        <div class="service">
+          <h3>טיפול במתבגרות</h3>
+          <p>הטיפול עם מתבגרות מתמקד בחיבור רגשי ובשיחה, תוך שמירה על גישה מותאמת לגיל ולצרכים האישיים.</p>
+        </div>
+        <!-- שירות 3 -->
+        <div class="service">
+          <h3>טיפול בילדים</h3>
+          <p>טיפול בתינוקות וילדים מתבצע באמצעות מגע מרפא עדין המסייע להרגיע את מערכת העצבים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Workshop Section -->
   <section class="section">
     <div class="container">
@@ -302,7 +409,9 @@
           זוהי הזדמנות ייחודית להציץ פנימה, לגלות פתרונות חדשים,
           ולהעצים את הקשר העמוק עם עצמנו ועם הגוף.
         </p>
-        <a href="#" class="button">לפרטים נוספים על הסדנאות</a>
+        <div class="button-container">
+          <button class="button">לפרטים נוספים על הסדנאות</button>
+        </div>
       </div>
     </div>
   </section>
