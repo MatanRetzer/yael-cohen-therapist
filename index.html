@@ -57,6 +57,7 @@
       gap: 10px;
       font-weight: bold;
       transition: transform 0.2s ease;
+      z-index: 1000;
     }
 
     .phone-button:hover {
@@ -115,29 +116,29 @@
       width: 100%;
     }
 
-    /* כפתורי פעולה */
-    .action-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      margin: 40px auto;
+    /* סקשן כללי */
+    .section {
+      padding: 4rem 1rem;
+      background-color: var(--coral-light);
     }
 
-    .action-buttons a, .action-buttons button {
-      background-color: var(--peach-pink);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
+    .section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 2.25rem;
       font-weight: bold;
-      cursor: pointer;
       text-align: center;
-      transition: transform 0.2s ease, background-color 0.3s ease;
+      margin-bottom: 2rem;
     }
 
-    .action-buttons a:hover, .action-buttons button:hover {
-      transform: scale(1.05);
-      background-color: var(--coral-dark);
+    .section p {
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #4a5568;
     }
 
     /* גלריה */
@@ -175,6 +176,66 @@
       font-size: 1rem;
       margin: 5px 0;
     }
+
+    /* כפתורי פעולה */
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin: 40px auto;
+    }
+
+    .action-buttons a, .action-buttons button {
+      background-color: var(--peach-pink);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .action-buttons a:hover, .action-buttons button:hover {
+      transform: scale(1.05);
+      background-color: var(--coral-dark);
+    }
+
+    /* סגנונות לחלקים שהוספתי */
+    .about-section {
+      padding: 4rem 1rem;
+      background: linear-gradient(to right, var(--coral-light), var(--peach-light));
+    }
+
+    .about-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-section img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section h2 {
+      font-size: 2.25rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+
   </style>
 </head>
 <body>
@@ -189,18 +250,61 @@
       <h1>גוף רכות לב</h1>
       <h2>טיפול רגשי דרך הגוף – יעל כהן</h2>
       <p>ברוכה הבאה. אם הגעת, כנראה שאת מוכנה לתהליך ריפוי. אני כאן להציע לך תמיכה והחלמה דרך חיבור לגוף.</p>
-      <button>לשיחת היכרות ראשונה</button>
+      <button onclick="window.location.href='tel:0507688407'">לשיחת היכרות ראשונה</button>
     </div>
     <!-- גל SVG -->
     <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFF" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,186.7C672,160,768,128,864,138.7C960,149,1056,203,1152,202.7C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
   </header>
 
-  <!-- כפתורי פעולה -->
-  <section class="action-buttons container">
-    <a href="https://wa.me/972507688407">💬 שלחי הודעה ב-WhatsApp</a>
-    <button onclick="document.getElementById('form-section').scrollIntoView({behavior: 'smooth'});">
-      הרשמה לטיפול
-    </button>
+  <!-- החלק החדש שנוסף -->
+  <!-- Therapy Process Section -->
+  <section class="section">
+    <div class="container">
+      <h2>מסע לגילוי עצמי</h2>
+      <p>מוזמנת לחיות חיים עירניים ומרגשים - במקום חיי הישרדות</p>
+      <div class="process-content">
+        <p>
+          הגוף שולח מסרים דרך תחושות. העבודה עם הגוף משחררת מתח, ומרגיעה את מערכת העצבים, מזרימה את הנוזלים,
+          משמנת את המפרקים ומשחררת נוקשות וחסימות. בתהליך טיפולי הגוף לומד בקצב שלו שפה חדשה שמובילה לריפוי ושינוי.
+        </p>
+        <p>
+          דפוסים והרגלים שגדלנו עליהם מוטמעים ונרשמים בגוף שלנו, גופנו אוגר זכרונות עבר ורגשות.
+          שינוי דפוסים או הרגלים אינם קלים, ולפעמים בלתי אפשריים. דרך קצב הנשימה והתחושות שצפות,
+          הגוף לומד שפה חדשה, שפה של חיבור בין הגוף לנפש ושם מתרחשים ניסים שמאפשרים הקלה, צמיחה ושחרור.
+        </p>
+        <div class="steps">
+          <h3>איך מתנהל הטיפול?</h3>
+          <ul>
+            <li><span></span>הטיפול מתחיל בשיחה להעלאת סוגיה רגשית או פיסית</li>
+            <li><span></span>ממשיך למגע ונענוע עדין, בקצב פעימות הלב</li>
+            <li><span></span>יחד נקבל את כל מה שיעלה</li>
+            <li><span></span>נסיים בשיחה להעמקת תובנות וכלים מעשיים</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshop Section -->
+  <section class="section">
+    <div class="container">
+      <div class="workshop">
+        <h2>סדנאות חווייתיות</h2>
+        <p>
+          סדנה חווייתית, המשלבת <span class="font-semibold">אימפרוביזציה, תנועה, דרמה ומשחקיות</span>.
+          הסדנאות מעודדות להתבטא ולהתנסות, תוך יצירת חיבור עמוק לגוף ולנפש, ומסייעות בריפוי ושחרור רגשות וחוויות.
+        </p>
+        <p>
+          הסדנה מתחברת לרוח הזמן ולמעגל השנה היהודי, המהווים זמנים מיוחדים של חיבור למחזורי החיים.
+          אנו מזמינות את המשתתפות לחוות בנועם תהליכי התפתחות אישית משמעותיים.
+        </p>
+        <p class="highlight">
+          זוהי הזדמנות ייחודית להציץ פנימה, לגלות פתרונות חדשים,
+          ולהעצים את הקשר העמוק עם עצמנו ועם הגוף.
+        </p>
+        <a href="#" class="button">לפרטים נוספים על הסדנאות</a>
+      </div>
+    </div>
   </section>
 
   <!-- גלריה -->
@@ -216,6 +320,30 @@
       </div>
     </section>
   </main>
+
+  <!-- סקשן היכרות עם יעל -->
+  <section class="about-section">
+    <div class="container">
+      <img src="yael_profile.jpg" alt="יעל כהן">
+      <h2>נעים להכיר, יעל</h2>
+      <p>
+        הכל התחיל מעבר לים. אחרי לימודי ביוטכנולוגיה באוניברסיטה ומספר שנות עבודה במעבדה,
+        הנפש ביקשה חופש. התגלגלתי לשליחות בהודו, שם פתחתי גן ילדים ובמקביל תמכתי במטיילים
+        שאיבדו כיוון וחוו משבר וחרדה.
+      </p>
+      <p>
+        היום המפגש עם הגוף הוא חלק עיקרי בתהליך הטיפולי - מסע לגילוי עצמי דרך הכרת תחושות הגוף.
+      </p>
+    </div>
+  </section>
+
+  <!-- כפתורי פעולה -->
+  <section class="action-buttons container">
+    <a href="https://wa.me/972507688407">💬 שלחי הודעה ב-WhatsApp</a>
+    <button onclick="document.getElementById('form-section').scrollIntoView({behavior: 'smooth'});">
+      הרשמה לטיפול
+    </button>
+  </section>
 
   <!-- פוטר -->
   <footer>
