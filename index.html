@@ -3,30 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>דף נחיתה - יעל כהן</title>
+  <title>גוף רכות לב - יעל כהן</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Assistant:wght@200;300;400;600;700&display=swap');
 
     /* צבעים */
     :root {
-      --peach-main: #FFDAB9;
-      --peach-dark: #FFB695;
-      --peach-pink: #FFE4E1;
-      --peach-light: #FFF5EE;
-      --coral-light: #FFE5D9;
-      --coral-medium: #FFD1B9;
-      --coral-dark: #FFB999;
-      --soft-pink: #FDE6E6;
-      --soft-orange: #FFE8D5;
+      --primary-color: #FFB6C1;
+      --secondary-color: #FFDAB9;
+      --accent-color: #FF6F61;
+      --background-color: #FFF5EE;
+      --text-color: #333;
+      --header-color: #FFFFFF;
     }
 
     /* בסיס */
     body {
       margin: 0;
       font-family: 'Assistant', 'Alef', sans-serif;
-      background-color: var(--peach-light);
-      line-height: 1.5; /* הקטנת מרווח בין שורות */
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
     a {
@@ -38,8 +36,10 @@
       margin: 0;
     }
 
-    .text-center {
-      text-align: center;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
 
     /* כפתור טלפון */
@@ -47,14 +47,12 @@
       position: fixed;
       top: 20px;
       right: 20px;
-      background-color: var(--peach-dark);
+      background-color: var(--accent-color);
       color: white;
       padding: 10px 20px;
       border-radius: 30px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
-      gap: 10px;
       font-weight: bold;
       transition: transform 0.2s ease;
       z-index: 1000;
@@ -65,186 +63,149 @@
     }
 
     /* כותרת עליונה */
-    .hero {
-      position: relative;
+    header {
+      background: url('yael.jpg') center/cover no-repeat;
       height: 100vh;
-      background: linear-gradient(to bottom, rgba(255, 182, 149, 0.3), rgba(255, 218, 185, 0.1)), url('yael.jpg') center/cover no-repeat;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: var(--header-color);
       text-align: center;
-      color: white;
+      position: relative;
     }
 
-    .hero h1 {
-      font-size: 4rem; /* הגדלת גודל הטקסט */
-      margin-bottom: 10px;
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
     }
 
-    .hero h2 {
-      font-size: 1.5rem;
+    header .content {
+      position: relative;
+      z-index: 1;
+      padding: 0 1rem;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
       margin-bottom: 20px;
     }
 
-    .hero h2.hero-subtitle {
-      font-size: 2rem; /* הגדלת גודל הטקסט */
+    header h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
     }
 
-    .hero p {
-      font-size: 1.25rem; /* הגדלת גודל הטקסט */
-      background: rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+    header p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
     }
 
-    .hero a.call-button {
-      display: inline-block;
-      background-color: var(--peach-dark);
+    header a.call-button {
+      background-color: var(--accent-color);
       color: white;
-      padding: 10px 20px;
+      padding: 15px 30px;
       border-radius: 30px;
       font-weight: bold;
-      cursor: pointer;
       transition: background 0.3s ease;
     }
 
-    .hero a.call-button:hover {
-      background-color: var(--peach-main);
+    header a.call-button:hover {
+      background-color: var(--secondary-color);
     }
 
-    /* גל SVG */
-    .wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      pointer-events: none;
-      z-index: -1; /* העברה אחורה כדי למנוע חסימת אלמנטים */
-    }
-
-    /* סקשן כללי */
-    .section {
+    /* סקשן השירות העיקרי */
+    .main-service {
+      background-color: var(--secondary-color);
       padding: 4rem 1rem;
-      background-color: var(--coral-light);
     }
 
-    .section .container {
-      max-width: 1200px;
+    .main-service h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--accent-color);
+    }
+
+    .main-service .content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-align: justify;
+    }
+
+    .main-service .content p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* שירותים נוספים */
+    .additional-services {
+      padding: 2rem 1rem;
+    }
+
+    .additional-services h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    .section h2 {
-      font-size: 2.25rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 2rem;
+    .service-item {
+      background-color: var(--background-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .section p {
-      font-size: 1.25rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: #4a5568;
-      line-height: 1.6; /* הקטנת מרווח בין שורות */
-    }
-
-    /* Services Section */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .services .service {
-      background-color: var(--coral-medium);
-      padding: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-    }
-
-    .services .service:hover {
-      background-color: var(--coral-dark);
-    }
-
-    .services .service h3 {
-      font-size: 1.875rem;
-      font-weight: bold;
+    .service-item h3 {
+      font-size: 1.5rem;
       margin-bottom: 1rem;
+      color: var(--accent-color);
     }
 
-    .services .service p {
-      font-size: 1.125rem;
-      margin: 0;
-      line-height: 1.6; /* הקטנת מרווח בין שורות */
-    }
-
-    /* Workshop Section */
-    .workshop {
-      margin-top: 4rem;
-      padding: 2rem;
-      background-color: var(--coral-medium);
-      border-radius: 0.5rem;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .workshop h2 {
-      font-size: 2.25rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .workshop p {
-      font-size: 1.125rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.6; /* הקטנת מרווח בין שורות */
-    }
-
-    .workshop p.highlight {
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-top: 2rem;
-      margin-bottom: 0;
-      text-align: center;
-    }
-
-    .workshop .button-container {
-      text-align: center;
-    }
-
-    .workshop .button {
-      display: inline-block;
-      margin-top: 2rem;
-      background-color: var(--peach-dark);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s ease, background-color 0.3s ease;
-    }
-
-    .workshop .button:hover {
-      transform: scale(1.05);
-      background-color: var(--peach-main);
+    .service-item p {
+      font-size: 1rem;
+      color: var(--text-color);
     }
 
     /* גלריה */
+    .gallery-section {
+      padding: 4rem 1rem;
+      background-color: var(--background-color);
+    }
+
+    .gallery-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--accent-color);
+    }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      margin: 40px 0;
     }
 
     .gallery img {
       width: 100%;
-      height: 500px; /* הגדלת גובה התמונות */
-      object-fit: cover; /* התאמת התמונה למיכל */
-      clip-path: circle(50% at 50% 50%);
+      height: auto;
+      border-radius: 10px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -253,21 +214,41 @@
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     }
 
-    /* פוטר */
-    footer {
-      background-color: var(--peach-main);
-      padding: 20px;
+    /* סקשן היכרות */
+    .about-section {
+      padding: 4rem 1rem;
+      background-color: var(--secondary-color);
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
       text-align: center;
+      margin-bottom: 2rem;
+      color: var(--accent-color);
     }
 
-    footer h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    footer p {
-      font-size: 1rem;
-      margin: 5px 0;
+    .about-content img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content p {
+      font-size: 1.25rem;
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
     }
 
     /* כפתורי פעולה */
@@ -279,66 +260,60 @@
       margin: 40px auto;
     }
 
-    .action-buttons a, .action-buttons button {
-      background-color: var(--peach-pink);
+    .action-buttons a {
+      background-color: var(--accent-color);
       color: white;
-      padding: 10px 20px;
+      padding: 15px 30px;
       border-radius: 30px;
       font-weight: bold;
-      cursor: pointer;
-      text-align: center;
+      font-size: 1.25rem;
       transition: transform 0.2s ease, background-color 0.3s ease;
-      border: none;
     }
 
-    .action-buttons a:hover, .action-buttons button:hover {
+    .action-buttons a:hover {
       transform: scale(1.05);
-      background-color: var(--coral-dark);
+      background-color: var(--secondary-color);
     }
 
-    /* סגנונות לחלקים שהוספתי */
-    .about-section {
-      padding: 4rem 1rem;
-      background: linear-gradient(to right, var(--coral-light), var(--peach-light));
-    }
-
-    .about-section .container {
-      max-width: 800px;
-      margin: 0 auto;
+    /* פוטר */
+    footer {
+      background-color: var(--primary-color);
+      padding: 2rem 1rem;
       text-align: center;
     }
 
-    .about-section img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    footer h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--header-color);
     }
 
-    .about-section h2 {
-      font-size: 2.25rem;
+    footer p {
+      font-size: 1rem;
+      color: var(--header-color);
+    }
+
+    footer a {
+      color: var(--header-color);
       font-weight: bold;
-      margin-bottom: 1.5rem;
     }
 
-    .about-section p {
-      font-size: 1.125rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.6; /* הקטנת מרווח בין שורות */
-      color: #4a5568;
-    }
+    /* התאמות למובייל */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
 
-    /* סגנונות לחדר הטיפולים */
-    .gallery-section h2 {
-      font-size: 2.5rem; /* הגדלת גודל הטקסט */
-    }
+      header h2 {
+        font-size: 1.5rem;
+      }
 
-    .gallery-section p {
-      font-size: 1.5rem; /* הגדלת גודל הטקסט */
+      .main-service h2,
+      .about-section h2,
+      .gallery-section h2 {
+        font-size: 2rem;
+      }
     }
-
   </style>
 </head>
 <body>
@@ -348,141 +323,88 @@
   </a>
 
   <!-- כותרת ראשית -->
-  <header class="hero">
-    <div>
+  <header>
+    <div class="content">
       <h1>גוף רכות לב</h1>
-      <h2 class="hero-subtitle">טיפול רגשי דרך הגוף – יעל כהן</h2>
-  	  <h2>תהליך ריפוי ושחרור דפוסים דרך הגוף</h2>
-      <p>ברוכה הבאה אם הגעת, לכאן, כנראה שאת מוכנה  להתחיל בתהליך של ריפוי אני כאן כדי להציע לך תמיכה ולווי מתוך הקשבה לקצב שהגוף שלך מבקש.</p>
+      <h2>טיפול רגשי דרך הגוף – יעל כהן</h2>
+      <p>ברוכה הבאה! אם הגעת לכאן, כנראה שאת מוכנה להתחיל בתהליך של ריפוי. אני כאן כדי להציע לך תמיכה וליווי מתוך הקשבה לקצב שהגוף שלך מבקש.</p>
       <a href="tel:0507688407" class="call-button">לשיחת היכרות ראשונה</a>
     </div>
-    <!-- גל SVG -->
-    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <defs>
-        <!-- גרדיאנט ליצירת מעבר חלק בין החלקים -->
-        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#FFE5D9;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#FFF5EE;stop-opacity:1" />
-        </linearGradient>
-      </defs>
-      <path fill="url(#waveGradient)" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,229.3C384,235,480,213,576,186.7C672,160,768,128,864,138.7C960,149,1056,203,1152,202.7C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-    </svg>
   </header>
 
-  <!-- החלק החדש שנוסף -->
-  <!-- Therapy Process Section -->
-  <section class="section">
+  <!-- סקשן השירות העיקרי -->
+  <section class="main-service">
     <div class="container">
       <h2>מה זה טיפול רגשי דרך הגוף?</h2>
-      <p>טיפול דרך הגוף הוא מסע לגילוי עצמי והזדמנות להוולד מחדש.</p>
-      <div class="process-content">
-        <p>
-  		  במקום לחיות חיים  של הישרדות  את  מוזמנת להתחיל לחיות חיים עירניים ומרגשים.   במציאות שלנו, מה שקורה בחוץ, הוא השתקפות של העולם הפנימי שלנו.
-  		  הגוף אוגר בתוכו זכרונות עבר ורגשות, דפוסים והרגלים שגדלנו עליהם. וכאשר אנחנו מרגישות  כאב או  מתח או כל  תחושה פיזית אחרת זו הדרך של הגוף שלנו לדבר איתנו ולגלות לנו סודות.
-        </p>
-        <p>
-  		  גם אם נבין בשכל ונרצה לשנות דפוס או הרגל, זה ממש לא  קל, ולפעמים אפילו בלתי אפשרי.
-  		  בתהליך טיפולי הגוף לומד בקצב שלו שפה חדשה, ויש לנו יכולת להתחבר  לחלקים עמוקים יותר של עצמנו ולמצוא את הדרך לריפוי ושינוי.
-  		  העבודה עם הגוף לא רק משחררת מתח, אלא גם מרגיעה את מערכת העצבים, מזרימה את הנוזלים , משמנת את המפרקים ומשחררת נוקשות וחסימות.
-  		  אנחנו מתמקדות  בקצב הנשימה ובתחושות שעולות, ומזמינות  את הגוף לשחרר מתח ולהתפנות לריפוי.
-        </p>
-        <div class="steps">
-          <h3>💚למי הטיפול מתאים?</h3>
-          <ul>
-            <li><span></span>למי שמרגישה תקיעות</li>
-            <li><span></span>למי שסובלת מכאבים פיזיים ורגשיים</li>
-            <li><span></span>למי שסובלת מטראומות וחרדות</li>
-            <li><span></span>למי שחווה משבר נפשי</li>
-  			<li><span></span>למי שחווה תשישות נפשית</li>
-  			<li><span></span>וגם לכל מי שרוצה להתחבר וללמוד להקשיב לגוף שלה</li>
-          </ul>
-        </div>
-  		</p>
-  		<div class="steps">
-          <h3>💚כיצד הטיפול מתבצע?</h3>
-          <ul>
-            <li><span></span>נפתח יחד את המרחב הטיפולי בשיחה על הסוגיה שמעסיקה אותך, מתוך גישה המשלבת חכמה עתיקה וטיפול עכשווי</li>
-            <li><span></span>לאחר זיהוי הסוגיה, נתחיל בתהליך עדין של חיבור והקשבה לגוף, נזהה איפה הסוגיה מתבטאת בתחושות הפיזיות</li>
-            <li><span></span>נעבור למיטת הטיפולים, שם אלווה אותך במגע ונענוע בקצב פעימות הלב, תוך המשך הקשבה לתחושות העולות</li>
-            <li><span></span>מתוך המגע והתנועה, נעמיק בהבנת המסרים שהגוף מעביר, נקשיב לנשימה ולכל מה שמתעורר</li>
-  			<li><span></span>לקראת סיום המפגש נחזור לשיחה בישיבה ונעבד את מה שעלה מתוך כוונה שתצאי הביתה עם תובנה או כלי מעשי כצידה לדרך</li>
-          </ul>
-        </div>
+      <div class="content">
+        <p>טיפול דרך הגוף הוא מסע לגילוי עצמי והזדמנות להיוולד מחדש. במקום לחיות חיים של הישרדות, את מוזמנת להתחיל לחיות חיים עירניים ומרגשים. במציאות שלנו, מה שקורה בחוץ הוא השתקפות של העולם הפנימי שלנו.</p>
+        <p>הגוף אוגר בתוכו זכרונות עבר, רגשות, דפוסים והרגלים שגדלנו עליהם. כאשר אנחנו מרגישות כאב, מתח או כל תחושה פיזית אחרת, זו הדרך של הגוף שלנו לדבר איתנו ולגלות לנו סודות.</p>
+        <p>גם אם נבין בשכל ונרצה לשנות דפוס או הרגל, זה ממש לא קל, ולפעמים אפילו בלתי אפשרי. בתהליך טיפולי הגוף לומד בקצב שלו שפה חדשה, ויש לנו יכולת להתחבר לחלקים עמוקים יותר של עצמנו ולמצוא את הדרך לריפוי ושינוי.</p>
+        <p>העבודה עם הגוף לא רק משחררת מתח, אלא גם מרגיעה את מערכת העצבים, מזרימה את הנוזלים, משמנת את המפרקים ומשחררת נוקשות וחסימות. אנחנו מתמקדות בקצב הנשימה ובתחושות שעולות, ומזמינות את הגוף לשחרר מתח ולהתפנות לריפוי.</p>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="section">
+  <!-- שירותים נוספים -->
+  <section class="additional-services">
     <div class="container">
-      <h2>טיפול רגשי דרך הגוף</h2>
-      <div class="services">
+      <h2>שירותים נוספים</h2>
+      <div class="services-list">
         <!-- שירות 1 -->
-        <div class="service">
-          <h3>סדנאות</h3>
-          <p>אני מציעה סדנה חווייתית המשלבת אימפרוביזציה, תנועה, דרמה ומשחקיות. כלים יצירתיים אלה מאפשרים למשתתפות להתבטא ולהתנסות בדרכים חדשות. הסדנה מעודדת חיבור לגוף ולנפש, ומסייעת בשחרור רגשות וחוויות בדרך קלילה ומרפאת.
-  		  הסדנה מחוברת לרוח הזמן ולמעגל השנה, ומזמינה את המשתתפות לחוות תהליכי התפתחות בהקשר של מחזורי החיים. כל מפגש מהווה הזדמנות להתבוננות פנימית, גילוי תובנות חדשות והעצמת הקשר עם עצמנו ועם הגוף.</p>
+        <div class="service-item">
+          <h3>סדנאות חווייתיות</h3>
+          <p>סדנאות המשלבות תנועה, אימפרוביזציה וכלים יצירתיים, המאפשרות התפתחות אישית בתוך מרחב תומך ומעצים.</p>
         </div>
         <!-- שירות 2 -->
-        <div class="service">
+        <div class="service-item">
           <h3>טיפול בנערות ומתבגרות</h3>
-          <p>הטיפול עם מתבגרות מתמקד בחיבור רגשי ובשיחה, תוך שמירה על גישה מותאמת לגיל ולצרכים האישיים שלהן. לרוב ללא מגע, ובמקום זאת נשתמש בכלים טיפוליים יצירתיים, שמסייעים להתמודד עם אתגרים רגשיים ולפתח חוסן פנימי.
-  		  נפגשתי רבות עם נערות בסיכון והתמודדתי עם אתגרים כמו קשיי תקשורת, חיפוש זהות, בניית העצמי, לחץ חברתי וחרדות. העבודה שלי עם מתבגרות מתמקדת בהענקת סביבה תומכת ומחזקת, תוך שימוש בכלים טיפוליים שמסייעים לפתח כלים להתמודדות והתפתחות.</p>
+          <p>תמיכה וליווי לנערות בתהליכי גדילה והתבגרות, תוך שימוש בכלים יצירתיים והקשבה לצרכים הייחודיים שלהן.</p>
         </div>
         <!-- שירות 3 -->
-        <div class="service">
+        <div class="service-item">
           <h3>טיפול בתינוקות וילדים</h3>
-          <p>הטיפול בתינוקות וילדים מתבצע באמצעות מגע עדין המותאם אישית לילד ונעשה בצורה מרגיעה, לשיפור תחושת הביטחון והקלה על מתח וחרדה. הטיפול מסייע להרגשת קרקוע, הרגעת מערכת העצבים ויצירת סביבה בטוחה.
-          הטיפול מתאים במיוחד לפני מצבים מלחיצים כמו מבחנים, טיפולי שיניים, שינויי סביבה (מעבר לבית ספר או גן) או כל מצב המעורר חרדה או חוסר ביטחון. המגע מחזק את החיבור לגוף ומסייע לילד להתמודד באופן רגוע עם אתגרים יומיומיים.</p>
+          <p>טיפול עדין באמצעות מגע המותאם לתינוקות וילדים, לשיפור תחושת הביטחון והקלה על מתח וחרדה.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- גלריה -->
-  <main class="container">
-    <section class="gallery-section">
-      <h2 class="text-center">חדר הטיפולים</h2>
-      <p class="text-center">חדר הטיפולים שלי נועד להעניק תחושה של ביטחון, חום, רוגע ונוחות</p>
+  <section class="gallery-section">
+    <div class="container">
+      <h2>חדר הטיפולים</h2>
       <div class="gallery">
-        <img src="1.jpg" alt="טיפול 1">
-        <img src="2.jpg" alt="טיפול 2">
-        <img src="3.jpg" alt="טיפול 3">
-        <img src="4.jpg" alt="טיפול 4">
+        <img src="1.jpg" alt="חדר הטיפולים 1">
+        <img src="2.jpg" alt="חדר הטיפולים 2">
+        <img src="3.jpg" alt="חדר הטיפולים 3">
+        <img src="4.jpg" alt="חדר הטיפולים 4">
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- סקשן היכרות עם יעל -->
   <section class="about-section">
     <div class="container">
-      <img src="yael_profile.jpg" alt="יעל כהן">
-      <h2>אז נעים להכיר</h2>
-      <p>
-        אני יעל כהן, מטפלת רגשית דרך הגוף, בעלת ניסיון של מעל 15 שנה בבריאות הנפש במגזר הציבורי והפרטי. בעלת הכשרה כמטפלת בפסיכולוגיה יהודית על פי הבעל שם טוב ובעוצמת הרכות, מאמנת אישית, ומנחת קבוצות באימפרוביזציה בתנועה.
-  		מאז ילדותי הייתי סקרנית להבין איך אנשים מרגישים ומה מסתתר מאחורי המילים שלהם. הייתי יושבת באוטובוסים, מקשיבה לשיחות של אנשים ואפילו כותבת את השיחות שלהם במחברת - מנסה להבין את הדינמיקות הרגשיות שמניעות את ההתנהגויות שלנו.
-  		בסוף שנות העשרים של חיי התגלגלתי לשליחות בהודו. שם פתחתי גן ילדים, ובזמני הפנוי תמכתי במטיילים שאיבדו כיוון ונקלעו למשברים רגשיים וחרדות. עבדתי עם נוער ומבוגרים במסגרות טיפוליות שונות במגזר הציבורי והפרטי.
-  		לאורך השנים בהן ליוויתי אנשים בתהליכי שינוי וצמיחה, הגעתי להבנה שכלים מנטליים בלבד אינם מספיקים, והריפוי האמיתי עובר דרך הגוף והחוויה. היום אני משלבת את כל הכלים האלה בעבודתי.
-      </p>
-      <p>
-        המפגש עם הגוף הוא חלק עיקרי בתהליך - כי אני מאמינה שהגוף שלנו יודע את הדרך, והוא יכול להוביל אותנו לגילוי עצמי ולריפוי עמוק.
-      </p>
+      <h2>נעים להכיר</h2>
+      <div class="about-content">
+        <img src="yael_profile.jpg" alt="יעל כהן">
+        <p>אני יעל כהן, מטפלת רגשית דרך הגוף עם ניסיון של מעל 15 שנה. אני משלבת בין חכמה עתיקה לכלים טיפוליים עכשוויים, במטרה ללוות נשים במסען לריפוי, צמיחה והתחברות לעצמן.</p>
+        <p>מאז ומתמיד התעניינתי ברגשות ובחוויות האנושיות. לאורך השנים ליוויתי אנשים בתהליכי שינוי והבנתי שהריפוי האמיתי עובר דרך הגוף והחוויה. אני מזמינה אותך להצטרף אליי למסע של גילוי עצמי וריפוי עמוק.</p>
+      </div>
     </div>
   </section>
 
   <!-- כפתורי פעולה -->
-  <section class="action-buttons container">
+  <section class="action-buttons">
     <a href="https://wa.me/972507688407">💬 שלחי הודעה ב-WhatsApp</a>
-    <a href="https://forms.gle/Zny8xBeVzV6e6GBz9" class="form-button" target="_blank">
-      הרשמה לטיפול
-    </a>
+    <a href="https://forms.gle/Zny8xBeVzV6e6GBz9" target="_blank">הרשמה לטיפול</a>
   </section>
 
   <!-- פוטר -->
   <footer>
-    <h3>לקבלת פרטים נוספים מוזמנת לפנות אלי או  למלא את הטופס המצורף ואני ואחזור אלייך טלפונית.</h3>
+    <h3>מוזמנת לפנות אליי לקבלת פרטים נוספים או למלא את הטופס המצורף ואחזור אלייך טלפונית.</h3>
     <p>בברכת אהבה וריפוי,</p>
-    <p><strong>יעל</strong></p>
+    <p><strong>יעל כהן</strong></p>
     <p><a href="tel:0507688407">050-7688407</a></p>
   </footer>
 </body>
