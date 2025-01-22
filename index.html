@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-
 <html dir="rtl" lang="he" style="color: #676B5C;">
 <head style="color: #676B5C;">
-<meta charset="utf-8" style="color: #676B5C;"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport" style="color: #676B5C;"/>
-<link href="styles.css" rel="stylesheet" style="color: #676B5C;"/>
-<style style="color: #676B5C;">
+	<meta charset="utf-8" style="color: #676B5C;">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" style="color: #676B5C;">
+	<meta name="description" content="יעל כהן - מטפלת רגשית דרך הגוף. טיפולים רגשיים בשיטות ייחודיות כמו עוצמת הרכות, תרפיה בתנועות עיניים, וסדנאות יצירתיות.">
+	<meta name="keywords" content="טיפול רגשי, עוצמת הרכות, תרפיה בתנועות עיניים, סדנא, יעל כהן">
+	<meta property="og:title" content="יעל כהן - טיפול רגשי דרך הגוף">
+	<meta property="og:description" content="חוויית טיפול עמוקה המחברת בין גוף ונפש עם יעל כהן.">
+	<meta property="og:image" content="url-to-your-hero-image.jpg">
+	<link href="styles.css?v=1.0" rel="stylesheet" style="color: #676B5C;">
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+	<script src="scripts.js?v=1.0" defer></script>
+	<title>יעל כהן - טיפול רגשי דרך הגוף</title>
+    <style>
     @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Assistant:wght@200;300;400;600;700&display=swap');
 
     /* צבעים */
@@ -21,7 +28,7 @@
     /* בסיס */
     body {
       margin: 0;
-      font-family: 'Assistant', 'Alef', sans-serif;
+      font-family: 'M PLUS Rounded 1c', sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
@@ -33,7 +40,8 @@
     }
 
     h1, h2, h3, p {
-      margin: 0;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
     }
 
     .container {
@@ -66,7 +74,9 @@
     /* כותרת עליונה */
     header {
       background: url('ראשי אופציה 1.jpg') center/cover no-repeat;
-      height: 100vh;
+      min-height: 50vh;
+      height: auto;
+      padding: 5rem 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -103,6 +113,7 @@
     }
 
     header p {
+	  font-family: 'M PLUS Rounded 1c', sans-serif;
       font-size: 1.25rem;
       max-width: 800px;
       margin: 0 auto 40px;
@@ -175,12 +186,14 @@
     }
 
     .service-item h3 {
+	  font-family: 'M PLUS Rounded 1c', sans-serif;
       font-size: 1.5rem;
       margin-bottom: 1rem;
       color: var(--accent-color);
-    }
+    } 
 
     .service-item p {
+	  font-family: 'M PLUS Rounded 1c', sans-serif;
       font-size: 1rem;
       color: var(--text-color);
     }
@@ -248,6 +261,7 @@
     }
 
     .about-content p {
+	  font-family: 'M PLUS Rounded 1c', sans-serif;
       font-size: 1.25rem;
       color: var(--text-color);
       margin-bottom: 1.5rem;
@@ -324,7 +338,7 @@
 	margin-top: 1rem;
 	font-weight: 500;
 	border-radius: 25px;
-	font-family: 'Assistant', sans-serif; /* לפי מה שהגדרת */
+	font-family: 'M PLUS Rounded 1c', sans-serif; /* לפי מה שהגדרת */
 	cursor: pointer;
 	transition: all 0.3s ease;
 	}
@@ -381,6 +395,7 @@
     }
 
     footer p {
+	  font-family: 'M PLUS Rounded 1c', sans-serif;
       font-size: 1rem;
       color: var(--header-color);
     }
@@ -392,65 +407,61 @@
 
     /* התאמות למובייל */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      header h2 {
-        font-size: 1.5rem;
-      }
-
-      .main-service h2,
-      .about-section h2,
-      .gallery-section h2 {
-        font-size: 2rem;
-      }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header h2 {
+            font-size: 1.5rem;
+        }
+        .main-service h2,
+        .about-section h2,
+        .gallery-section h2 {
+            font-size: 2rem;
+        }
     }
-  </style>
-&lt;link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&amp;display=swap" rel="stylesheet"&gt;&lt;link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;display=swap" rel="stylesheet"&gt;&lt;style&gt;
-.expanded-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-}
 
-.expanded-content.show {
-    max-height: 500px;
-    opacity: 1;
-}
+    .expanded-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+        opacity: 0;
+    }
 
-.read-more-btn {
-    background: none;
-    border: 2px solid #cb7286;
-    color: #cb7286;
-    cursor: pointer;
-    padding: 0.5rem 1.5rem;
-    margin-top: 1rem;
-    font-weight: 500;
-    border-radius: 25px;
-    font-family: 'Assistant', sans-serif;
-    transition: all 0.3s ease;
-}
+    .expanded-content.show {
+        max-height: 500px;
+        opacity: 1;
+    }
 
-.read-more-btn:hover {
-    background: #cb7286;
-    color: white;
-}
-&lt;/style&gt;</head>
-<body style='font-family: "M PLUS Rounded 1c", sans-serif;color: #676B5C;'>
-<!-- כפתור טלפון -->
-<a class="phone-button" href="tel:0507688407">
-    📞 בואי נדבר
-  </a>
+    .read-more-btn {
+        background: none;
+        border: 2px solid #cb7286;
+        color: #cb7286;
+        cursor: pointer;
+        padding: 0.5rem 1.5rem;
+        margin-top: 1rem;
+        font-weight: 500;
+        border-radius: 25px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        transition: all 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+        background: #cb7286;
+        color: white;
+    }
+    </style>
+</head>
+<body style='font-family: "M PLUS Rounded 1c", sans-serif; color: #676B5C;'>
+    <!-- כפתור טלפון -->
+    <a class="phone-button" href="tel:0507688407" aria-label="לחצי להתקשר">
+        📞 בואי נדבר
+    </a>
 <!-- כותרת ראשית -->
-<header style="color: #676B5C;">
-<div class="content" style="color: #676B5C;">
+<header>
+<div class="content">
 <h1 style="color: #676B5C;">גוף. רכות. לב.</h1>
 <h2 style="color: #676B5C;">יעל כהן</h2>
 <p style="color: #676B5C;">טיפול רגשי דרך הגוף </p>
-<a class="call-button" href="tel:0507688407" style="color: #676B5C;"></a>
 </div>
 </header>
 <!-- סקשן השירות העיקרי -->
@@ -460,7 +471,7 @@
     <div class="treatments-grid">
       <!-- כרטיס 1 -->
       <div class="treatment-card">
-        <img src="עוצמת_הרכות.jpg" alt="עוצמת הרכות" class="treatment-img">
+        <img src="עוצמת_הרכות.jpg" alt="עוצמת הרכות" class="treatment-img" loading="lazy">
         <h3 class="treatment-title">עוצמת הרכות</h3>
         <p>הגוף שלנו אוגר בתוכו זכרונות ורגשות. כאב, מתח או כל תחושה פיזית הם הדרך של הגוף לדבר איתנו ולהזמין אותנו להקשיב פנימה, לרגשות שלנו. הטיפול משלב שיחה ונענוע בטכניקה הנקראת "הפעמה".</p>
         <button class="read-more-btn" onclick="toggleContent(this, 'more-content-1')">קרא עוד</button>
@@ -475,7 +486,7 @@
 
       <!-- כרטיס 2 -->
       <div class="treatment-card">
-        <img src="בעשט_2.jpg" alt="פסיכולוגיה יהודית על פי הבעל שם טוב" class="treatment-img">
+        <img src="בעשט_2.jpg" alt="פסיכולוגיה יהודית על פי הבעל שם טוב" class="treatment-img" loading="lazy">
         <h3 class="treatment-title">פסיכולוגיה יהודית על פי הבעל שם טוב</h3>
         <p>
 השיטה מבוססת על תורת המראות של הבעל שם טוב לפיה המציאות שלנו היא השתקפות של העולם הפנימי שלנו, וכל קושי ומכאוב שהופיע בחיינו, נועד לגדל ולהצמיח אותנו וטמונה בו מתנה עבורנו.  
@@ -494,7 +505,7 @@
 
       <!-- כרטיס 3 -->
       <div class="treatment-card">
-        <img src="תנועות_עיניים_2.jpg" alt="תרפיה בתנועות עיניים (EMID)" class="treatment-img">
+        <img src="תנועות_עיניים_2.jpg" alt="תרפיה בתנועות עיניים (EMID)" class="treatment-img" loading="lazy">
         <h3 class="treatment-title">תרפיה בתנועות עיניים (EMID)</h3>
         <p>
 הרבה דפוסים והרגלים מוטמעים ונרשמים בגוף שלנו מחוויות העבר
@@ -514,8 +525,8 @@
 <!-- סדנא -->
 <section class="sadna-section" style="background-color: #D8A9B4; color: #fff6ef; padding: 2rem 0;">
   <div class="container">
-    <img src="תמונה_סדנא_2.jpg" alt="סדנא" class="sadna-img" 
-         style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1.5rem; border-radius: 10px;" />
+    <img src="תמונה_סדנא_2.jpg" alt="סדנא" class="sadna-img" loading="lazy" 
+         style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1.5rem; border-radius: 10px;">
     
     <h3 class="sadna-title" style="color: #cb7286; text-align: center; margin-bottom: 1rem;">
       סדנא
@@ -549,8 +560,8 @@
       <!-- ממליצה 1 -->
       <div class="testimonial-item" 
            style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
-        <img src="עוד_תמונות_2.jpg" alt="ממליצה 1" 
-             style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+        <img src="עוד_תמונות_2.jpg" alt="ממליצה 1" loading="lazy" 
+             style="width: 100%; border-radius: 10px; margin-bottom: 1rem;" >
         <p>
           <strong>ממליצה 1:</strong><br>
           הטיפול אצל יעל זה היה המקום היחיד שהצלחתי להתחבר למקומות הכואבים שהתכחשתי אליהם, 
@@ -562,7 +573,7 @@
       <!-- ממליצה 2 -->
       <div class="testimonial-item" 
            style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
-        <img src="עוד_תמונות_3.jpg" alt="ממליצה 2" 
+        <img src="עוד_תמונות_3.jpg" alt="ממליצה 2" loading="lazy"
              style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
         <p>
           <strong>ממליצה 2:</strong><br>
@@ -575,7 +586,7 @@
       <!-- ממליצה 3 -->
       <div class="testimonial-item" 
            style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
-        <img src="עוד_תמונות_4.jpg" alt="ממליצה 3" 
+        <img src="עוד_תמונות_4.jpg" alt="ממליצה 3" loading="lazy"
              style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
         <p>
           <strong>ממליצה 3:</strong><br>
@@ -592,7 +603,7 @@
 <section class="about-section" style="color: #fff6ef;">
 <div class="container">
 <h2 style="color: #cb7286;">אז נעים להכיר</h2>
-<img alt="יעל כהן" src="yael_profile.jpg" />
+<img alt="יעל כהן" src="yael_profile.jpg" loading="lazy">
 <p style="color: #1b0a43;">אני יעל כהן, מטפלת רגשית דרך הגוף. 
 מאז שהייתי ילדה הייתי סקרנית איך אנשים מרגישים ומה מסתתר מאחורי המילים שלהם. הייתי יושבת באוטובוס, משוחחת בראש עם האנשים סביבי, לפעמים אפילו כותבת את השיחות שלהם על דף, ומנסה להבין את הדינמיקות הרגשיות שמניעות את ההתנהגויות שלנו.
 בסוף שנות העשרים של חיי התגלגלתי לשליחות בהודו, שם פתחתי גן ילדים, ובזמני הפנוי תמכתי במטיילים שאיבדו כיוון ונקלעו למשברים רגשיים וחרדות. 
@@ -613,23 +624,10 @@
 </footer>
 <!-- כפתורי פעולה -->
 <section class="action-buttons" style="color: #676B5C;">
+<h2 style="text-align: center;">💬 בואי נדבר</h2>
 <a href="https://wa.me/972507688407" style="color: #676B5C;">💬 בואי נדבר</a>
 <a href="https://forms.gle/Zny8xBeVzV6e6GBz9" style="color: #676B5C;" target="_blank">כפתור להשארת פרטים</a>
 </section>
 
-&lt;script&gt;
-    // פונקציית קרא עוד
-      function toggleContent(btn, contentId) {
-    const expandedContent = document.getElementById(contentId);
-    btn.classList.toggle('active');
-    expandedContent.classList.toggle('show');
-  
-    if (expandedContent.classList.contains('show')) {
-      btn.textContent = 'קרא פחות';
-    } else {
-      btn.textContent = 'קרא עוד';
-    }
-  }
-&lt;/script&gt;
 </body>
 </html>
