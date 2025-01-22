@@ -222,14 +222,11 @@
     }
 
     .about-content img {
-      width: 100%;              /* תופס את כל הרוחב של ההורה */
-	  height: auto;             /* משמר יחס גובה-רוחב של התמונה */
-	  max-height: 200px;        /* הגבלת גובה מקסימלי */
-	  border-radius: 10px;      /* פינות מעוגלות */
-	  margin-bottom: 1.5rem;
-	  display: block;           /* בטל inline spacing */
-	  background-color: transparent; /* אין צורך בצבע רקע */
-	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* אפשר להשאיר */
+       width: auto;
+       height: auto;
+       max-width: 100%;         /* Image scales down within container */
+       max-height: 200px;       /* Restrict height to 200px */
+       border-radius: 10px;
     }
 
     .about-content p {
