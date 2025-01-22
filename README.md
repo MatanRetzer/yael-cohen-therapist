@@ -47,6 +47,6 @@ Colors & Fonts: Update variables under :root in the embedded CSS.
 Read More Buttons: Modify the toggleContent() function in the script at the bottom if you need to change text or animation.
 Image Paths: Change or rearrange the src attributes if you store images in subdirectories.
 Contact
-For any questions about the code or deployment, feel free to open an issue or message King Matan.
+For any questions about the code or deployment, feel free to open an issue or message Retzer Matan.
 
 Enjoy your new landing page!
