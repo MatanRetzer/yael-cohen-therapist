@@ -74,7 +74,7 @@
     /* כותרת עליונה */
     header {
       background: url('ראשי אופציה 1.jpg') center/cover no-repeat;
-	  filter: brightness(1.1);
+	  filter: brightness(1.5);
       min-height: 50vh;
       height: auto;
       padding: 5rem 1rem;
@@ -94,7 +94,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.2); /* שכבת לבן חצי שקופה */
     }
 
     header .content {
@@ -222,13 +222,13 @@
     }
 
     .about-content img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
+      width: 250px;            /* קוטר העיגול */
+	  height: 250px;           /* קוטר העיגול */
+	  border-radius: 50%;      /* עיגול מלא */
+	  object-fit: cover;       /* ממלא את הקונטיינר בעיגול */
+	  object-position: 30% 50%;/* מקדם את התמונה מעט לשמאל (30%), אנכי אמצע (50%) */
 	  background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .about-content p {
