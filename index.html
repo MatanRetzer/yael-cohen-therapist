@@ -222,13 +222,13 @@
     }
 
     .about-content img {
-      width: 200px;            /* קוטר העיגול */
-	  height: 200px;           /* קוטר העיגול */
-	  border-radius: 50%;      /* עיגול מלא */
-	  object-fit: cover;       /* ממלא את הקונטיינר בעיגול */
-	  object-position: 50% 70%;/* מקדם את התמונה מעט לשמאל (30%), אנכי אמצע (50%) */
-	  background-color: #fff;
-	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;         /* תופס את כל הרוחב של ההורה */
+	  height: auto;        /* משמר יחס גובה-רוחב של התמונה */
+	  border-radius: 10px;    /* מסיר עיגול או פינות מעוגלות */
+	  margin-bottom: 1.5rem;
+	  display: block;      /* בטל inline spacing */
+	  background-color: transparent; /* אין צורך בצבע רקע */
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* אפשר להשאיר או להסיר */
     }
 
     .about-content p {
