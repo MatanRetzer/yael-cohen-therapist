@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>גוף רכות לב - יעל כהן</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
+
+<html dir="rtl" lang="he" style="color: #676B5C;">
+<head style="color: #676B5C;">
+<meta charset="utf-8" style="color: #676B5C;"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" style="color: #676B5C;"/>
+<link href="styles.css" rel="stylesheet" style="color: #676B5C;"/>
+<style style="color: #676B5C;">
     @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Assistant:wght@200;300;400;600;700&display=swap');
 
     /* צבעים */
@@ -44,27 +44,28 @@
 
     /* כפתור טלפון */
     .phone-button {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: var(--accent-color);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      transition: transform 0.2s ease;
-      z-index: 1000;
-    }
+	  position: fixed;
+	  top: 20px;
+	  right: 20px;
+	  background-color: #cb7286; /* צבע הרקע המבוקש */
+	  color: #fff6ef;           /* צבע הטקסט המבוקש */
+	  padding: 10px 20px;
+	  border-radius: 30px;
+	  display: flex;
+	  align-items: center;
+	  font-weight: bold;
+	  transition: transform 0.2s ease;
+	  z-index: 1000;
+	}
 
-    .phone-button:hover {
+	.phone-button:hover {
       transform: scale(1.05);
-    }
+	}
+
 
     /* כותרת עליונה */
     header {
-      background: url('yael.jpg') center/cover no-repeat;
+      background: url('ראשי אופציה 1.jpg') center/cover no-repeat;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -122,9 +123,10 @@
 
     /* סקשן השירות העיקרי */
     .main-service {
-      background-color: var(--secondary-color);
-      padding: 4rem 1rem;
-    }
+	  background-color: #D8A9B4; /* צבע הרקע שביקשת */
+	  color: #676B5C;           /* צבע הטקסט */
+	  padding: 4rem 1rem;      /* אפשר להשאיר את הקיים */
+	}
 
     .main-service h2 {
       font-size: 2.5rem;
@@ -281,6 +283,96 @@
       padding: 2rem 1rem;
       text-align: center;
     }
+		/* מקטע הטיפולים */
+	.treatments-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	}
+	
+	/* כרטיס בודד */
+	.treatment-card {
+	background-color: #fff;        /* כדי להבליט את הכרטיס על רקע #fff6ef */
+	border-radius: 10px;          /* פינות מעוגלות */
+	padding: 1.5rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* צל קליל - לא חובה */
+	}
+	
+	.treatment-img {
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	}
+	
+	.treatment-title {
+	color: #cb7286;  /* צבע כותרת הטיפול */
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	}
+	
+	/* צבע טקסט גלובלי בכל הטקסט בתוך הכרטיס */
+	.treatment-card p {
+	color: #1b0a43; 
+	}
+	
+	/* כפתור קרא עוד */
+	.read-more-btn {
+	background-color: #cb7286; 
+	color: #fff6ef; 
+	border: none;
+	padding: 0.5rem 1.5rem;
+	margin-top: 1rem;
+	font-weight: 500;
+	border-radius: 25px;
+	font-family: 'Assistant', sans-serif; /* לפי מה שהגדרת */
+	cursor: pointer;
+	transition: all 0.3s ease;
+	}
+	
+	.read-more-btn:hover {
+	background-color: #b85b77; /* מעט כהה יותר */
+	}
+	
+	/* תוכן מוסתר (כמו בקוד הקיים) */
+	.expanded-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+	opacity: 0;
+	}
+	
+	.expanded-content.show {
+	max-height: 500px; /* אפשר להגדיל/להקטין לפי הצורך */
+	opacity: 1;
+	}
+	.sadna-section {
+	background-color: #D8A9B4;
+	color: #fff6ef;
+	padding: 2rem 0;
+	}
+	
+	.sadna-section .sadna-img {
+	width: 100%;
+	max-width: 600px;
+	display: block;
+	margin: 0 auto 1.5rem;
+	border-radius: 10px;
+	}
+	
+	.sadna-section .sadna-title {
+	color: #cb7286;
+	text-align: center;
+	margin-bottom: 1rem;
+	}
+	
+	.sadna-section .read-more-btn {
+	background-color: #cb7286;
+	color: #fff6ef;
+	border: none;
+	padding: 0.5rem 1.5rem;
+	border-radius: 25px;
+	cursor: pointer;
+	}
 
     footer h3 {
       font-size: 1.5rem;
@@ -315,97 +407,229 @@
       }
     }
   </style>
-</head>
-<body>
-  <!-- כפתור טלפון -->
-  <a href="tel:0507688407" class="phone-button">
-    📞 התקשרי אליי
+&lt;link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&amp;display=swap" rel="stylesheet"&gt;&lt;link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;display=swap" rel="stylesheet"&gt;&lt;style&gt;
+.expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+}
+
+.expanded-content.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.read-more-btn {
+    background: none;
+    border: 2px solid #cb7286;
+    color: #cb7286;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    font-family: 'Assistant', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: #cb7286;
+    color: white;
+}
+&lt;/style&gt;</head>
+<body style='font-family: "M PLUS Rounded 1c", sans-serif;color: #676B5C;'>
+<!-- כפתור טלפון -->
+<a class="phone-button" href="tel:0507688407">
+    📞 בואי נדבר
   </a>
-
-  <!-- כותרת ראשית -->
-  <header>
-    <div class="content">
-      <h1>גוף רכות לב</h1>
-      <h2>טיפול רגשי דרך הגוף – יעל כהן</h2>
-      <p>ברוכה הבאה! אם הגעת לכאן, כנראה שאת מוכנה להתחיל בתהליך של ריפוי. אני כאן כדי להציע לך תמיכה וליווי מתוך הקשבה לקצב שהגוף שלך מבקש.</p>
-      <a href="tel:0507688407" class="call-button">לשיחת היכרות ראשונה</a>
-    </div>
-  </header>
-
-  <!-- סקשן השירות העיקרי -->
-  <section class="main-service">
-    <div class="container">
-      <h2>מה זה טיפול רגשי דרך הגוף?</h2>
-      <div class="content">
-        <p>טיפול דרך הגוף הוא מסע לגילוי עצמי והזדמנות להיוולד מחדש. במקום לחיות חיים של הישרדות, את מוזמנת להתחיל לחיות חיים עירניים ומרגשים. במציאות שלנו, מה שקורה בחוץ הוא השתקפות של העולם הפנימי שלנו.</p>
-        <p>הגוף אוגר בתוכו זכרונות עבר, רגשות, דפוסים והרגלים שגדלנו עליהם. כאשר אנחנו מרגישות כאב, מתח או כל תחושה פיזית אחרת, זו הדרך של הגוף שלנו לדבר איתנו ולגלות לנו סודות.</p>
-        <p>גם אם נבין בשכל ונרצה לשנות דפוס או הרגל, זה ממש לא קל, ולפעמים אפילו בלתי אפשרי. בתהליך טיפולי הגוף לומד בקצב שלו שפה חדשה, ויש לנו יכולת להתחבר לחלקים עמוקים יותר של עצמנו ולמצוא את הדרך לריפוי ושינוי.</p>
-        <p>העבודה עם הגוף לא רק משחררת מתח, אלא גם מרגיעה את מערכת העצבים, מזרימה את הנוזלים, משמנת את המפרקים ומשחררת נוקשות וחסימות. אנחנו מתמקדות בקצב הנשימה ובתחושות שעולות, ומזמינות את הגוף לשחרר מתח ולהתפנות לריפוי.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- שירותים נוספים -->
-  <section class="additional-services">
-    <div class="container">
-      <h2>שירותים נוספים</h2>
-      <div class="services-list">
-        <!-- שירות 1 -->
-        <div class="service-item">
-          <h3>סדנאות חווייתיות</h3>
-          <p>סדנאות המשלבות תנועה, אימפרוביזציה וכלים יצירתיים, המאפשרות התפתחות אישית בתוך מרחב תומך ומעצים.</p>
-        </div>
-        <!-- שירות 2 -->
-        <div class="service-item">
-          <h3>טיפול בנערות ומתבגרות</h3>
-          <p>תמיכה וליווי לנערות בתהליכי גדילה והתבגרות, תוך שימוש בכלים יצירתיים והקשבה לצרכים הייחודיים שלהן.</p>
-        </div>
-        <!-- שירות 3 -->
-        <div class="service-item">
-          <h3>טיפול בתינוקות וילדים</h3>
-          <p>טיפול עדין באמצעות מגע המותאם לתינוקות וילדים, לשיפור תחושת הביטחון והקלה על מתח וחרדה.</p>
+<!-- כותרת ראשית -->
+<header style="color: #676B5C;">
+<div class="content" style="color: #676B5C;">
+<h1 style="color: #676B5C;">גוף. רכות. לב.</h1>
+<h2 style="color: #676B5C;">יעל כהן</h2>
+<p style="color: #676B5C;">טיפול רגשי דרך הגוף </p>
+<a class="call-button" href="tel:0507688407" style="color: #676B5C;"></a>
+</div>
+</header>
+<!-- סקשן השירות העיקרי -->
+<section class="treatments-section" style="background-color: #fff6ef; color: #1b0a43; padding: 2rem 0;">
+  <div class="container">
+    <!-- Grid שמכיל 3 כרטיסים -->
+    <div class="treatments-grid">
+      <!-- כרטיס 1 -->
+      <div class="treatment-card">
+        <img src="עוצמת_הרכות.jpg" alt="עוצמת הרכות" class="treatment-img">
+        <h3 class="treatment-title">עוצמת הרכות</h3>
+        <p>הגוף שלנו אוגר בתוכו זכרונות ורגשות. כאב, מתח או כל תחושה פיזית הם הדרך של הגוף לדבר איתנו ולהזמין אותנו להקשיב פנימה, לרגשות שלנו. הטיפול משלב שיחה ונענוע בטכניקה הנקראת "הפעמה".</p>
+        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-1')">קרא עוד</button>
+        <div id="more-content-1" class="expanded-content">
+          <p>
+הפעמה היא נענוע בקצב פעימות לב העובר, המחזירה אותנו לתחושה רחמית ומוגנת בה מתאפשר ריפוי ושינוי.
+הטיפול מתבצע בלבוש מלא על מיטת טיפולים, ומשלב שיחה וכלים ייחודים המחברים לתחושות הגוף.
+הטיפול מסייע במצבי משבר, כאבים פיסיים ורגשיים, נוקשות, חסימות, דיכאון,  טראומה חרדה, תשישות ועוד.
+</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- גלריה -->
-  <section class="gallery-section">
-    <div class="container">
-      <h2>חדר הטיפולים</h2>
-      <div class="gallery">
-        <img src="1.jpg" alt="חדר הטיפולים 1">
-        <img src="2.jpg" alt="חדר הטיפולים 2">
-        <img src="3.jpg" alt="חדר הטיפולים 3">
-        <img src="4.jpg" alt="חדר הטיפולים 4">
+      <!-- כרטיס 2 -->
+      <div class="treatment-card">
+        <img src="בעשט_2.jpg" alt="פסיכולוגיה יהודית על פי הבעל שם טוב" class="treatment-img">
+        <h3 class="treatment-title">פסיכולוגיה יהודית על פי הבעל שם טוב</h3>
+        <p>
+השיטה מבוססת על תורת המראות של הבעל שם טוב לפיה המציאות שלנו היא השתקפות של העולם הפנימי שלנו, וכל קושי ומכאוב שהופיע בחיינו, נועד לגדל ולהצמיח אותנו וטמונה בו מתנה עבורנו.  
+</p>
+        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-2')">קרא עוד</button>
+        <div id="more-content-2" class="expanded-content">
+          <p>בתהליך הריפוי נעבור דרך שלושת השלבים המתקיימים בכל תהליך רוחני -
+'הכנעה' קבלת הבעיה או המצוקה
+'הבדלה' הפרדה והבדלת הבעיה מאיתנו 
+'המתקה' הפיכה של המצוקה למצמיחה 
+הטיפול מתבצע בשיחה בשילוב כלים מעולם הפסיכותרפיה (כתיבה, קלפים, משחק, ציור ועוד) 
+הטיפול מסייע במצבים של קשרים חברתיים, דיכאון, אתגרי  גיל ההתבגרות, בניית העצמי, חוסר ביטחון, חרדות, מצבי לחץ, מערכות יחסים ועוד. 
+</p>
+        </div>
+      </div>
+
+      <!-- כרטיס 3 -->
+      <div class="treatment-card">
+        <img src="תנועות_עיניים_2.jpg" alt="תרפיה בתנועות עיניים (EMID)" class="treatment-img">
+        <h3 class="treatment-title">תרפיה בתנועות עיניים (EMID)</h3>
+        <p>
+הרבה דפוסים והרגלים מוטמעים ונרשמים בגוף שלנו מחוויות העבר
+שינוי הרגלים או דפוסים הוא מורכב מאד, ולפעמים אפילו בלתי אפשרי, גם כשאנו מודעים אליהם, מכיון שדפוסים אלו נצרבו לנו בתת מודע בעקבות זיכרונות ואירועים שחווינו. 
+באמצעות תנועות עיניים נציף את הזכרון ונקודד אותו מחדש במוח. הזיכרון ישאר אבל הדפוס כבר לא יפעיל אותנו רגשית  
+</p>
+        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-3')">קרא עוד</button>
+        <div id="more-content-3" class="expanded-content">
+          <p>הטיפול מתבצע באמצעות הנחיה לתנועות עיניים, על פי פרוטוקולים מדויקים.   
+הטיפול מסייע במצבים של דיכאון, פוביות, חרדות, טראומות, פגיעות, דפוסי התנהגות ועוד.   
+</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- סדנא -->
+<section class="sadna-section" style="background-color: #D8A9B4; color: #fff6ef; padding: 2rem 0;">
+  <div class="container">
+    <img src="תמונה_סדנא_2.jpg" alt="סדנא" class="sadna-img" 
+         style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1.5rem; border-radius: 10px;" />
+    
+    <h3 class="sadna-title" style="color: #cb7286; text-align: center; margin-bottom: 1rem;">
+      סדנא
+    </h3>
+    
+    <p style="margin-bottom: 1rem;">
+      בנוסף לטיפולים בקליניקה, אני מנחה סדנא חווייתית המשלבת אימפרוביזציה, תנועה, דרמה, משחקיות וכלים יצירתיים.
+      הסדנא מעודדת חיבור לגוף ולנפש, מסייעת בשחרור רגשות ומאפשרת ריפוי בדרך קלילה וחוויתית.
+    </p>
+    
+    <button class="read-more-btn" onclick="toggleContent(this, 'more-content-sadna')" style="background-color: #cb7286; color: #fff6ef; border: none; padding: 0.5rem 1.5rem; border-radius: 25px; cursor: pointer;">
+      קרא עוד
+    </button>
+    
+    <div  id="more-content-sadna" class="expanded-content" style="margin-top: 1rem;">
+      <p>
+        הסדנא מחוברת לרוח הזמן ולמעגל השנה היהודי ומזמינה את המשתתפות לחוות תהליכי התפתחות אישית בהקשרים של מחזורי החיים והזמן.
+        הסדנא מהווה הזדמנות לגעת במקומות פנימיים, לגלות פתרונות חדשים ולהעצים את הקשר עם עצמנו ועם הגוף. 
+        ניתן להתאים את הסדנא לאירועים כמו מסיבת סיום, ערבי צוות, ימי גיבוש, ימי הולדת ועוד. 
+      </p>
+    </div>
+  </div>
+</section>
+<!-- המלצות -->
+<section class="testimonials-section" style="background-color: #Cfe1dc; color: #676B5C; padding: 2rem 0;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+    <h2 style="text-align: center; margin-bottom: 2rem;">המלצות</h2>
 
-  <!-- סקשן היכרות עם יעל -->
-  <section class="about-section">
-    <div class="container">
-      <h2>נעים להכיר</h2>
-      <div class="about-content">
-        <img src="yael_profile.jpg" alt="יעל כהן">
-        <p>אני יעל כהן, מטפלת רגשית דרך הגוף עם ניסיון של מעל 15 שנה. אני משלבת בין חכמה עתיקה לכלים טיפוליים עכשוויים, במטרה ללוות נשים במסען לריפוי, צמיחה והתחברות לעצמן.</p>
-        <p>מאז ומתמיד התעניינתי ברגשות ובחוויות האנושיות. לאורך השנים ליוויתי אנשים בתהליכי שינוי והבנתי שהריפוי האמיתי עובר דרך הגוף והחוויה. אני מזמינה אותך להצטרף אליי למסע של גילוי עצמי וריפוי עמוק.</p>
+    <div class="testimonials-grid" 
+         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      <!-- ממליצה 1 -->
+      <div class="testimonial-item" 
+           style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
+        <img src="עוד_תמונות_2.jpg" alt="ממליצה 1" 
+             style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+        <p>
+          <strong>ממליצה 1:</strong><br>
+          הטיפול אצל יעל זה היה המקום היחיד שהצלחתי להתחבר למקומות הכואבים שהתכחשתי אליהם, 
+          זה יצר אצלי ריפוי ועזר לי מאוד בכל תקופת ההיריון, התהליך עזר לי לקבל את העובר ולהתחבר אליו, 
+          להבין שאני עייפה וזקוקה למנוחה.
+        </p>
+      </div>
+
+      <!-- ממליצה 2 -->
+      <div class="testimonial-item" 
+           style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
+        <img src="עוד_תמונות_3.jpg" alt="ממליצה 2" 
+             style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+        <p>
+          <strong>ממליצה 2:</strong><br>
+          לצערי חוויתי אובדן של בן משפחה קרוב ואחרי המוות היה לי קשה מאוד. 
+          בזכות התהליך התחברתי לכאב האובדן ללא פחד לפגוש אותו מקרוב, וזה עזר לשחרר אותו. 
+          נעלמו לי הכאבים בגב ובצוואר.
+        </p>
+      </div>
+
+      <!-- ממליצה 3 -->
+      <div class="testimonial-item" 
+           style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
+        <img src="עוד_תמונות_4.jpg" alt="ממליצה 3" 
+             style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+        <p>
+          <strong>ממליצה 3:</strong><br>
+          הגעתי אל יעל מוצפת עם תחושה של המון חלקים רגישים ובוערים וכואבים. 
+          נאספתי לתוך מגע חומל, רך ומרפא, מגע שאסף את חלקיי העייפים לרחם של אהבה, 
+          ומשם הגיעו התשובות והכוחות. במעט מילים, עם המון רוך ועוצמה, כמו מים לנפש עייפה. 
+          ממפגש למפגש נולד בי כח חדש.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- סקשן היכרות עם יעל -->
+<section class="about-section" style="color: #fff6ef;">
+<div class="container">
+<h2 style="color: #cb7286;">אז נעים להכיר</h2>
+<img alt="יעל כהן" src="yael_profile.jpg" />
+<p style="color: #1b0a43;">אני יעל כהן, מטפלת רגשית דרך הגוף. 
+מאז שהייתי ילדה הייתי סקרנית איך אנשים מרגישים ומה מסתתר מאחורי המילים שלהם. הייתי יושבת באוטובוס, משוחחת בראש עם האנשים סביבי, לפעמים אפילו כותבת את השיחות שלהם על דף, ומנסה להבין את הדינמיקות הרגשיות שמניעות את ההתנהגויות שלנו.
+בסוף שנות העשרים של חיי התגלגלתי לשליחות בהודו, שם פתחתי גן ילדים, ובזמני הפנוי תמכתי במטיילים שאיבדו כיוון ונקלעו למשברים רגשיים וחרדות. 
+</p>
+<p style="color: #1b0a43;"> 
+עבדתי עם נוער ומבוגרים במסגרות טיפוליות שונות. במשך השנים בהם אני מלווה אנשים בתהליכי שינוי וצמיחה, הגיע שלב שבו הבנתי שכלים מנטליים בלבד לא מספיקים, והריפוי האמיתי עובר דרך הגוף והחוויה. היום אני משלבת את כל הכלים האלה בעבודתי. 
+המפגש עם הגוף הוא חלק עיקרי בעבודתי כי אני מאמינה שהגוף שלנו יודע את הדרך, והוא יכול להוביל אותנו לגילוי עצמי ולריפוי עמוק.
+אני עוסקת בתחום בריאות הנפש במגזר הציבורי והפרטי מעל 15 שנה. למדתי בבי"ס לעוצמת הרכות, אני בעלת הכשרה של מטפלת בפסיכולוגיה יהודית על פי תורת הבעל שם טוב ותעודת .EMID תרפיה בתנועות עיניים.  אני מנחת קבוצות באימפרוביזציה בתנועה.
+</p>
+</div>
+</section>
+<!-- פוטר -->
+<footer style="color: #fff6ef;">
+<h3 style="color: #676B5C;">לקבלת פרטים נוספים מוזמנת לפנות אלי או למלא את הטופס המצורף ואני ואשמח לחזור אלייך.</h3>
+<p style="color: #676B5C;">בברכת אהבה, יעל
+</p>
+<p style="color: #676B5C;"><a href="tel:0507688407" style="color: #676B5C;">050-7688407</a></p>
+</footer>
+<!-- כפתורי פעולה -->
+<section class="action-buttons" style="color: #676B5C;">
+<a href="https://wa.me/972507688407" style="color: #676B5C;">💬 בואי נדבר</a>
+<a href="https://forms.gle/Zny8xBeVzV6e6GBz9" style="color: #676B5C;" target="_blank">כפתור להשארת פרטים</a>
+</section>
 
-  <!-- כפתורי פעולה -->
-  <section class="action-buttons">
-    <a href="https://wa.me/972507688407">💬 שלחי הודעה ב-WhatsApp</a>
-    <a href="https://forms.gle/Zny8xBeVzV6e6GBz9" target="_blank">הרשמה לטיפול</a>
-  </section>
-
-  <!-- פוטר -->
-  <footer>
-    <h3>מוזמנת לפנות אליי לקבלת פרטים נוספים או למלא את הטופס המצורף ואחזור אלייך טלפונית.</h3>
-    <p>בברכת אהבה וריפוי,</p>
-    <p><strong>יעל כהן</strong></p>
-    <p><a href="tel:0507688407">050-7688407</a></p>
-  </footer>
+&lt;script&gt;
+    // פונקציית קרא עוד
+      function toggleContent(btn, contentId) {
+    const expandedContent = document.getElementById(contentId);
+    btn.classList.toggle('active');
+    expandedContent.classList.toggle('show');
+  
+    if (expandedContent.classList.contains('show')) {
+      btn.textContent = 'קרא פחות';
+    } else {
+      btn.textContent = 'קרא עוד';
+    }
+  }
+&lt;/script&gt;
 </body>
 </html>
