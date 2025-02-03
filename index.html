@@ -2,12 +2,13 @@
 <html dir="rtl" lang="he" style="color: #676B5C;">
 <head style="color: #676B5C;">
 	<meta charset="utf-8" style="color: #676B5C;">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" style="color: #676B5C;">
+	<meta content="width=device-width, initial-scale=1" name="viewport" style="color: #676B5C;">
 	<meta name="description" content="יעל כהן - מטפלת רגשית דרך הגוף. טיפולים רגשיים בשיטות ייחודיות כמו עוצמת הרכות, תרפיה בתנועות עיניים, וסדנאות יצירתיות.">
 	<meta name="keywords" content="טיפול רגשי, עוצמת הרכות, תרפיה בתנועות עיניים, סדנא, יעל כהן">
 	<meta property="og:title" content="יעל כהן - טיפול רגשי דרך הגוף">
 	<meta property="og:description" content="חוויית טיפול עמוקה המחברת בין גוף ונפש עם יעל כהן.">
 	<meta property="og:image" content="url-to-your-hero-image.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="styles.css?v=1.0" rel="stylesheet" style="color: #676B5C;">
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 	<script src="scripts.js?v=1.0" defer></script>
@@ -88,14 +89,17 @@
     }
 
     header::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0,0,0,0.1); /* שכבת לבן חצי שקופה */
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: rgba(255, 255, 255, 0.6); /* שכבת צבע בהירה עם שקיפות */
+	  backdrop-filter: blur(10px); /* טשטוש */
+	  z-index: 0; /* שים את השכבה מתחת לטקסט */
     }
+
 
     header .content {
       position: relative;
@@ -106,11 +110,15 @@
     header h1 {
       font-size: 3.5rem;
       margin-bottom: 20px;
+	  color: #676B5C; /* צבע אחיד לכל הטקסט ב-HERO */
+	  font-family: 'Gveret Levin Alefalefalef', sans-serif;  /* שימוש בגופן המותאם */
     }
 
     header h2 {
       font-size: 2rem;
       margin-bottom: 30px;
+	  color: #676B5C; /* צבע אחיד לכל הטקסט ב-HERO */
+	  font-family: 'Gveret Levin Alefalefalef', sans-serif;  /* שימוש בגופן המותאם */
     }
 
     header p {
@@ -118,6 +126,8 @@
       font-size: 1.25rem;
       max-width: 800px;
       margin: 0 auto 40px;
+	  color: #676B5C; /* צבע אחיד לכל הטקסט ב-HERO */
+	  font-family: 'Gveret Levin Alefalefalef', sans-serif;  /* שימוש בגופן המותאם */
     }
 
     header a.call-button {
@@ -195,7 +205,7 @@
 
     .service-item p {
 	  font-family: 'M PLUS Rounded 1c', sans-serif;
-      font-size: 1rem;
+      font-size: 1.25rem;
       color: var(--text-color);
     }
 
@@ -217,8 +227,9 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 60ch;
+	  margin: 0 auto; /* מרכז את הקטע */
+      padding: 0 1rem;
     }
 
     .about-content img {
@@ -329,6 +340,7 @@
 	opacity: 1;
 	}
 	.sadna-section {
+	font-size: 1.5rem; /* הגודל הרצוי */
 	background-color: #D8A9B4;
 	color: #fff6ef;
 	padding: 2rem 0;
@@ -344,6 +356,7 @@
 	
 	.sadna-section .sadna-title {
 	color: #cb7286;
+	font-size: 1.5rem; /* זה הגודל של כותרת "עוצמת הרכות" */
 	text-align: center;
 	margin-bottom: 1rem;
 	}
@@ -365,13 +378,21 @@
 
     footer p {
 	  font-family: 'M PLUS Rounded 1c', sans-serif;
-      font-size: 1rem;
+      font-size: 1.25rem;
       color: var(--header-color);
     }
 
     footer a {
       color: var(--header-color);
       font-weight: bold;
+    }
+
+	@font-face {
+      font-family: 'Gveret Levin Alefalefalef';
+      src: url('GveretLevinAlefAlefAlef-Regular.woff2') format('woff2'),
+           url('GveretLevinAlefAlefAlef-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
     }
 
     /* התאמות למובייל */
@@ -421,14 +442,14 @@
     </style>
 </head>
 <body style='font-family: "M PLUS Rounded 1c", sans-serif; color: #676B5C;'>
-    <!-- כפתור טלפון -->
+<!-- כפתור טלפון -->
     <a class="phone-button" href="tel:0507688407" aria-label="לחצי להתקשר">
-        📞 בואי נדבר
-    </a>
+    <i class="fa fa-phone" style="color: #25d366;"></i> בואי נדבר
+</a>
 <!-- כותרת ראשית -->
 <header>
 <div class="content">
-<h1 style="color: #676B5C;">גוף. רכות. לב.</h1>
+<h1 style="color: #676B5C;">גוף. רכות. לב</h1>
 <h2 style="color: #676B5C;">יעל כהן</h2>
 <p style="color: #676B5C;">טיפול רגשי דרך הגוף </p>
 </div>
@@ -437,12 +458,8 @@
 <section class="main-service">
   <div class="container" style="text-align: center;"> <!-- Center-align all child elements -->
     <!-- שורה ראשונה (גדולה יותר) -->
-    <h2 style="color: #676B5C; font-size: 2.5rem; margin-bottom: 1rem;">
+    <h2 style="color: #676B5C; font-size: 2rem; margin-bottom: 1rem;">
       מסע לגילוי עצמי והזדמנות להוולד מחדש
-    </h2>
-    <!-- שורה שנייה (קטנה יותר) -->
-    <h2 style="color: #676B5C; font-size: 2rem;">
-      טיפול רגשי דרך הגוף מאפשר לך לחיות חיים עירניים ומחוברים במקום חיים של הישרדות
     </h2>
   </div>
 </section>
@@ -458,10 +475,10 @@
         <p>הגוף שלנו אוגר בתוכו זכרונות ורגשות. כאב, מתח או כל תחושה פיזית הם הדרך של הגוף לדבר איתנו ולהזמין אותנו להקשיב פנימה, לרגשות שלנו. הטיפול משלב שיחה ונענוע בטכניקה הנקראת "הפעמה".</p>
         <button class="read-more-btn" onclick="toggleContent(this, 'more-content-1')">קרא עוד</button>
         <div id="more-content-1" class="expanded-content">
-          <p>
-הפעמה היא נענוע בקצב פעימות לב העובר, המחזירה אותנו לתחושה רחמית ומוגנת בה מתאפשר ריפוי ושינוי.
+          <p>הפעמה היא נענוע בקצב פעימות לב העובר, המחזירה אותנו לתחושה רחמית ומוגנת בה מתאפשר ריפוי ושינוי.
 הטיפול מתבצע בלבוש מלא על מיטת טיפולים, ומשלב שיחה וכלים ייחודים המחברים לתחושות הגוף.
 הטיפול מסייע במצבי משבר, כאבים פיסיים ורגשיים, נוקשות, חסימות, דיכאון,  טראומה חרדה, תשישות ועוד.
+מאפשר  לחיות חיים עירניים ומחוברים במקום חיים מתוך הישרדות
 </p>
         </div>
       </div>
@@ -510,24 +527,16 @@
     <img src="תמונה_סדנא_2.jpg" alt="סדנא" class="sadna-img" loading="lazy" 
          style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1.5rem; border-radius: 10px;">
     
-    <h3 class="sadna-title" style="color: #cb7286; text-align: center; margin-bottom: 1rem;">
-      סדנא
+    <h3 class="sadna-title" style="color: #cb7286; text-align: center; margin-bottom: 1rem; font-size: 1.5rem;">
+      סדנה
     </h3>
     
     <p style="margin-bottom: 1rem;">
-      בנוסף לטיפולים בקליניקה, אני מנחה סדנא חווייתית המשלבת אימפרוביזציה, תנועה, דרמה, משחקיות וכלים יצירתיים.
-      הסדנא מעודדת חיבור לגוף ולנפש, מסייעת בשחרור רגשות ומאפשרת ריפוי בדרך קלילה וחוויתית.
-    </p>
-    
-    <button class="read-more-btn" onclick="toggleContent(this, 'more-content-sadna')" style="background-color: #cb7286; color: #fff6ef; border: none; padding: 0.5rem 1.5rem; border-radius: 25px; cursor: pointer;">
-      קרא עוד
-    </button>
-    
-    <div  id="more-content-sadna" class="expanded-content" style="margin-top: 1rem;">
-      <p>
-        הסדנא מחוברת לרוח הזמן ולמעגל השנה היהודי ומזמינה את המשתתפות לחוות תהליכי התפתחות אישית בהקשרים של מחזורי החיים והזמן.
-        הסדנא מהווה הזדמנות לגעת במקומות פנימיים, לגלות פתרונות חדשים ולהעצים את הקשר עם עצמנו ועם הגוף. 
-        ניתן להתאים את הסדנא לאירועים כמו מסיבת סיום, ערבי צוות, ימי גיבוש, ימי הולדת ועוד. 
+      בנוסף לטיפולים בקליניקה, אני מנחה סדנה חווייתית המשלבת אימפרוביזציה, תנועה, דרמה, משחקיות וכלים יצירתיים.
+הסדנה מעודדת חיבור לגוף ולנפש, מסייעת בשחרור רגשות ומאפשרת ריפוי בדרך קלילה וחוויתית.
+הסדנה מחוברת לרוח הזמן ולמעגל השנה היהודי ומזמינה את המשתתפות לחוות תהליכי ההתפתחות אישית בהקשרים של מחזורי החיים והזמן.
+הסדנה מהווה הזדמנות לגעת במקומות פנימיים, לגלות פתרונות חדשים ולהעצים את הקשר עם עצמנו ועם הגוף. 
+ניתן להתאים את הסדנא לאירועים כמו מסיבת סיום, ערבי צוות, ימי גיבוש, ימי הולדת ועוד.
       </p>
     </div>
   </div>
@@ -541,41 +550,31 @@
          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
       <!-- ממליצה 1 -->
       <div class="testimonial-item" 
-           style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
+           style="background-color: #fff6ef; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
         <img src="עוד_תמונות_2.jpg" alt="ממליצה 1" loading="lazy" 
              style="width: 100%; border-radius: 10px; margin-bottom: 1rem;" >
         <p>
-          <strong>ממליצה 1:</strong><br>
-          הטיפול אצל יעל זה היה המקום היחיד שהצלחתי להתחבר למקומות הכואבים שהתכחשתי אליהם, 
-          זה יצר אצלי ריפוי ועזר לי מאוד בכל תקופת ההיריון, התהליך עזר לי לקבל את העובר ולהתחבר אליו, 
-          להבין שאני עייפה וזקוקה למנוחה.
+          "לצערי חוויתי אובדן של בן משפחה קרוב ואחרי המוות היה לי קשה מאוד ,  בזכות התהליך  התחברתי  לכאב האובדן ללא פחד לפגוש את הכאב מקרוב,  וזה עזר לשחרר אותו. נעלמו לי  הכאבים בגב ובצואר, מודה לך מאוד על שהית שם בשבילי  בתקופה הזו,  עם המגע הרך והעוטף והמילים המדויקות "
         </p>
       </div>
 
       <!-- ממליצה 2 -->
       <div class="testimonial-item" 
-           style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
+           style="background-color: #fff6ef; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
         <img src="עוד_תמונות_3.jpg" alt="ממליצה 2" loading="lazy"
              style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
         <p>
-          <strong>ממליצה 2:</strong><br>
-          לצערי חוויתי אובדן של בן משפחה קרוב ואחרי המוות היה לי קשה מאוד. 
-          בזכות התהליך התחברתי לכאב האובדן ללא פחד לפגוש אותו מקרוב, וזה עזר לשחרר אותו. 
-          נעלמו לי הכאבים בגב ובצוואר.
+          "הטיפול אצלך היה המקום היחיד שהצלחתי להתחבר למקומות הכואבים  שהתכחשתי אליהם,  זה יצר אצלי ריפוי ועזר לי מאוד בכל  תקופת ההריון, להתחבר אל העובר ולהבין שאני זקוקה למנוחה"
         </p>
       </div>
 
       <!-- ממליצה 3 -->
       <div class="testimonial-item" 
-           style="background-color: #fff; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
+           style="background-color: #fff6ef; border-radius: 10px; padding: 1.5rem; color: #676B5C;">
         <img src="עוד_תמונות_4.jpg" alt="ממליצה 3" loading="lazy"
              style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
         <p>
-          <strong>ממליצה 3:</strong><br>
-          הגעתי אל יעל מוצפת עם תחושה של המון חלקים רגישים ובוערים וכואבים. 
-          נאספתי לתוך מגע חומל, רך ומרפא, מגע שאסף את חלקיי העייפים לרחם של אהבה, 
-          ומשם הגיעו התשובות והכוחות. במעט מילים, עם המון רוך ועוצמה, כמו מים לנפש עייפה. 
-          ממפגש למפגש נולד בי כח חדש.
+          "הגעתי ליעל עם בעיות שינה, כאב כרוני ביד וחרדות מהמצב הבטחוני , שמחה לבשר שהיד נרפאה לגמרי, כבר אין  לי כאבים ואני ישנה בלילה כמו תינוקת. כל כך שמחה שהגעתי, קיבלתי מתנות אדירות בטיפול, למדתי להתיחס לעצמי ברכות וזה מדהים איך שזה מהדהד החוצה  ואיך כל היחס של הסביבה השתנה אלי"
         </p>
       </div>
     </div>
@@ -585,29 +584,44 @@
 <section class="about-section" style="color: #fff6ef;">
 <div class="about-content">
 <h2 style="color: #cb7286;">אז נעים להכיר</h2>
-<img alt="יעל כהן" src="yael_profile.jpg" loading="lazy">
-<p style="color: #1b0a43;">אני יעל כהן, מטפלת רגשית דרך הגוף. 
-מאז שהייתי ילדה הייתי סקרנית איך אנשים מרגישים ומה מסתתר מאחורי המילים שלהם. הייתי יושבת באוטובוס, משוחחת בראש עם האנשים סביבי, לפעמים אפילו כותבת את השיחות שלהם על דף, ומנסה להבין את הדינמיקות הרגשיות שמניעות את ההתנהגויות שלנו.
+<img alt="יעל כהן" src="yael_profile.jpg" loading="lazy" style="margin-bottom: 1rem;">
+<p style="color: #1b0a43;">אני יעל כהן, מטפלת רגשית דרך הגוף.
+</p>
+<p style="color: #1b0a43;"> 
+אני עוסקת בתחום בריאות הנפש במגזר הציבורי והפרטי מעל 15 שנה.
+בוגרת בית הספר של  "עוצמת הרכות", בעלת הכשרה של מטפלת בפסיכולוגיה יהודית על פי תורת הבעל שם טוב, בעלת הכשרת מטפלת EMID-תרפיה בתנועות עיניים ועוד. 
+בנוסף אני מנחת קבוצות באימפרוביזציה בתנועה.
+</p>
+<p style="color: #1b0a43;"> 
+המסע שלי לעולם הטיפול התחיל עוד בילדות. אני זוכרת את עצמי כילדה, סקרנית לדעת איך אנשים מרגישים ומה מסתתר מאחורי המילים שלהם. הייתי יושבת באוטובוס, משוחחת בראשי עם האנשים סביבי, לפעמים אפילו רושמת לעצמי  את השיחות שלהם במחברת שלי, ומנסה להבין את הדינמיקות הרגשיות.
+</p>
+<p style="color: #1b0a43;"> 
 בסוף שנות העשרים של חיי התגלגלתי לשליחות בהודו, שם פתחתי גן ילדים, ובזמני הפנוי תמכתי במטיילים שאיבדו כיוון ונקלעו למשברים רגשיים וחרדות. 
 </p>
 <p style="color: #1b0a43;"> 
-עבדתי עם נוער ומבוגרים במסגרות טיפוליות שונות. במשך השנים בהם אני מלווה אנשים בתהליכי שינוי וצמיחה, הגיע שלב שבו הבנתי שכלים מנטליים בלבד לא מספיקים, והריפוי האמיתי עובר דרך הגוף והחוויה. היום אני משלבת את כל הכלים האלה בעבודתי. 
-המפגש עם הגוף הוא חלק עיקרי בעבודתי כי אני מאמינה שהגוף שלנו יודע את הדרך, והוא יכול להוביל אותנו לגילוי עצמי ולריפוי עמוק.
-אני עוסקת בתחום בריאות הנפש במגזר הציבורי והפרטי מעל 15 שנה. למדתי בבי"ס לעוצמת הרכות, אני בעלת הכשרה של מטפלת בפסיכולוגיה יהודית על פי תורת הבעל שם טוב ותעודת .EMID תרפיה בתנועות עיניים.  אני מנחת קבוצות באימפרוביזציה בתנועה.
+לאורך השנים עבדתי עם נוער ומבוגרים במסגרות טיפוליות שונות. לאחר תקופה בה ליוויתי אנשים בתהליכי שינוי וצמיחה, הגיע שלב שבו הבנתי שכלים מנטליים בלבד לא מספיקים, והריפוי האמיתי עובר דרך הגוף והחוויה. 
+</p>
+<p style="color: #1b0a43;"> 
+היום המפגש עם הגוף הוא חלק עיקרי בעבודתי בקליניקה.
+אני מאמינה שהגוף שלנו יודע את הדרך, והוא יכול להוביל אותנו לגילוי עצמי ולריפוי עמוק.
 </p>
 </div>
 </section>
 <!-- פוטר -->
-<footer style="color: #fff6ef;">
-<h3 style="color: #676B5C;">לקבלת פרטים נוספים מוזמנת לפנות אלי או למלא את הטופס המצורף ואני ואשמח לחזור אלייך.</h3>
-<p style="color: #676B5C;">בברכת אהבה, יעל
+<footer style="color: #D8A9B4;">
+<p style="color: #676B5C;">לקבלת פרטים נוספים את מוזמנת לפנות אלי או למלא את הטופס המצורף, ואשמח לחזור אלייך. </p>
+<p style="color: #676B5C;">בברכת אהבה
+</p>
+<p style="color: #676B5C;">יעל
 </p>
 <p style="color: #676B5C;"><a href="tel:0507688407" style="color: #676B5C;">050-7688407</a></p>
 </footer>
 <!-- כפתורי פעולה -->
-<section class="action-buttons" style="color: #676B5C;">
-<a href="https://wa.me/972507688407" style="color: #676B5C;">💬 בואי נדבר</a>
-<a href="https://forms.gle/Zny8xBeVzV6e6GBz9" style="color: #676B5C;" target="_blank">כפתור להשארת פרטים</a>
+<section class="action-buttons" style="color: #676B5C; background-color: #cb7286">
+<a href="https://wa.me/972507688407" class="action-button" style="color: #676B5C;">
+    <i class="fa fa-whatsapp"></i> בואי נדבר
+</a>
+<a href="https://forms.gle/Zny8xBeVzV6e6GBz9" style="color: #676B5C; background-color: #cb7286" target="_blank">להשארת פרטים</a>
 </section>
 <script src="scripts.js" defer></script>
 </body>
