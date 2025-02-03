@@ -218,7 +218,7 @@
     }
 
     .about-section h2 {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       text-align: center;
       margin-bottom: 2rem;
       color: var(--accent-color);
@@ -259,19 +259,19 @@
     }
 
     .action-buttons a {
-      background-color: var(--accent-color);
-      color: white;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 1.25rem;
-      transition: transform 0.2s ease, background-color 0.3s ease;
-    }
+	  background-color: #cb7286;  /* צבע הרקע המבוקש */
+	  color: #fff6ef;             /* צבע הטקסט המבוקש */
+	  padding: 15px 30px;
+	  border-radius: 30px;
+	  font-weight: bold;
+	  font-size: 1.25rem;
+	  transition: transform 0.2s ease, background-color 0.3s ease;
+	}
 
     .action-buttons a:hover {
+      background-color: #b85b77;  /* שינוי צבע הרקע בהובר, אפשר לשנות לפי רצונך */
       transform: scale(1.05);
-      background-color: var(--secondary-color);
-    }
+	}
 
     /* פוטר */
     footer {
@@ -619,12 +619,11 @@
 <p style="color: #676B5C;"><a href="tel:0507688407" style="color: #676B5C;">050-7688407</a></p>
 </footer>
 <!-- כפתורי פעולה -->
-<section class="action-buttons" style="color: #676B5C;">
-
-<a href="https://wa.me/972507688407" class="action-button" style="color: #25d366;">
+<section class="action-buttons">
+  <a href="https://wa.me/972507688407" class="action-button">
     <i class="fa fa-whatsapp"></i> בואי נדבר
-</a>
-<a href="https://forms.gle/Zny8xBeVzV6e6GBz9" style="color: #25d366;" target="_blank">להשארת פרטים</a>
+  </a>
+  <a href="https://forms.gle/Zny8xBeVzV6e6GBz9" target="_blank">להשארת פרטים</a>
 </section>
 <script src="scripts.js" defer></script>
 </body>
