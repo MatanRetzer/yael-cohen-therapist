@@ -57,8 +57,8 @@
 	  top: 20px;
 	  right: 20px;
 	  font-size: 1.25rem; /* גודל האייקון */
-	  margin-right: 15px; /* רווח בין האייקון לטקסט */
-	  background-color: #cb7286; /* צבע הרקע המבוקש */
+	  margin-right: 25px; /* רווח בין האייקון לטקסט */
+	  background-color: #D8A9B4; /* שינוי צבע הרקע ל-D8A9B4 */
 	  color: #fff6ef;           /* צבע הטקסט המבוקש */
 	  padding: 10px 20px;
 	  border-radius: 30px;
@@ -110,7 +110,7 @@
     }
 
     header h1 {
-      font-size: 3.5rem;
+      font-size: 2rem;
       margin-bottom: 20px;
 	  color: #676B5C; /* צבע אחיד לכל הטקסט ב-HERO */
 	  font-family: 'M PLUS Rounded 1c', sans-serif;  /* שימוש בגופן המותאם */
@@ -122,10 +122,17 @@
 	  color: #676B5C; /* צבע אחיד לכל הטקסט ב-HERO */
 	  font-family: 'Gveret Levin Alefalefalef', sans-serif;  /* שימוש בגופן המותאם */
     }
+	
+	header h3 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+	  color: #676B5C; /* צבע אחיד לכל הטקסט ב-HERO */
+	  font-family: 'Gveret Levin Alefalefalef', sans-serif;  /* שימוש בגופן המותאם */
+    }
 
     header p {
 	  font-family: 'M PLUS Rounded 1c', sans-serif;
-      font-size: 1.25rem;
+      font-size: 2rem;
       max-width: 800px;
       margin: 0 auto 40px;
 	  color: #676B5C; /* צבע אחיד לכל הטקסט ב-HERO */
@@ -259,7 +266,7 @@
     }
 
     .action-buttons a {
-	  background-color: #cb7286;  /* צבע הרקע המבוקש */
+	  background-color: #D8A9B4;  /* שינוי צבע הרקע ל-D8A9B4 */
 	  color: #fff6ef;             /* צבע הטקסט המבוקש */
 	  padding: 15px 30px;
 	  border-radius: 30px;
@@ -380,10 +387,11 @@
 	 
 	 /* פוטר */
     footer {
-	  background-color: white;  /* צבע רקע לבן */
+	  background-color: #D8A9B4;  /* צבע הרקע החדש */
 	  color: #676B5C;           /* צבע טקסט כהה */
 	  padding: 2rem 1rem;
 	  text-align: center;
+	  font-size: 1.5rem;
 	}
 	  
 	  footer h3 {
@@ -394,7 +402,7 @@
 	  
 	  footer p {
 	  font-family: 'M PLUS Rounded 1c', sans-serif;
-	  font-size: 1.25rem;
+	  font-size: 1.5rem;
 	  color: #676B5C; /* צבע טקסט כהה */
 	}
 	  
@@ -460,13 +468,14 @@
 <body style='font-family: "M PLUS Rounded 1c", sans-serif; color: #676B5C;'>
 <!-- כפתור טלפון -->
     <a class="phone-button" href="tel:0507688407" aria-label="לחצי להתקשר">
-    <i class="fa fa-phone" style="color: #25d366;"></i> בואי נדבר
+    <i class="fa fa-phone" style="color: #676B5C;"></i> בואי נדבר
 </a>
 <!-- כותרת ראשית -->
 <header>
 <div class="content">
+<h3 style="color: #676B5C;">יעל כהן</h3>
 <h1 style="color: #676B5C;">גוף · רכות · לב</h1>
-<h2 style="color: #676B5C;">יעל כהן</h2>
+
 <p style="color: #676B5C;">טיפול רגשי דרך הגוף </p>
 </div>
 </header>
@@ -488,13 +497,14 @@
       <div class="treatment-card">
         <img src="עוצמת_הרכות.jpg" alt="עוצמת הרכות" class="treatment-img" loading="lazy">
         <h3 class="treatment-title">עוצמת הרכות</h3>
-        <p>הגוף שלנו אוגר בתוכו זכרונות ורגשות. כאב, מתח או כל תחושה פיזית הם הדרך של הגוף לדבר איתנו ולהזמין אותנו להקשיב פנימה, לרגשות שלנו. הטיפול משלב שיחה ונענוע בטכניקה הנקראת "הפעמה".</p>
-        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-1')">קרא עוד</button>
+        <p>הגוף שלנו אוגר בתוכו זיכרונות ורגשות. 
+כאב, מתח או כל תחושה פיזית הם הדרך של הגוף לדבר איתנו ולהזמין אותנו להקשיב פנימה, לרגשות שלנו. טיפול  בעוצמת הרכות משלב שיחה ונענוע בטכניקה הנקראת "הפעמה".".</p>
+        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-1')">קראי עוד</button>
         <div id="more-content-1" class="expanded-content">
-          <p>הפעמה היא נענוע בקצב פעימות לב העובר, המחזירה אותנו לתחושה רחמית ומוגנת בה מתאפשר ריפוי ושינוי.
-הטיפול מתבצע בלבוש מלא על מיטת טיפולים, ומשלב שיחה וכלים ייחודים המחברים לתחושות הגוף.
-הטיפול מסייע במצבי משבר, כאבים פיסיים ורגשיים, נוקשות, חסימות, דיכאון,  טראומה חרדה, תשישות ועוד.
-מאפשר  לחיות חיים עירניים ומחוברים במקום חיים מתוך הישרדות
+          <p>הפעמה היא נענוע בקצב פעימות לב העובר, המחזירה אותנו לתחושה רחמית ומוגנת, תחושה המאפשרת ריפוי ושינוי. 
+הטיפול מאפשר לחיות חיים חיוניים ומתוך ערנות ולא מתוך הישרדות. 
+מתבצע בלבוש מלא על מיטת טיפולים, ומשלב שיחה וכלים ייחודים המחברים לתחושות הגוף.
+הטיפול מסייע במצבי משבר, כאבים פיסיים ורגשיים, נוקשות, חסימות, דיכאון, טראומה, חרדה, תשישות ועוד.
 </p>
         </div>
       </div>
@@ -503,17 +513,13 @@
       <div class="treatment-card">
         <img src="בעשט_2.jpg" alt="פסיכולוגיה יהודית על פי הבעל שם טוב" class="treatment-img" loading="lazy">
         <h3 class="treatment-title">פסיכולוגיה יהודית על פי הבעל שם טוב</h3>
-        <p>
-השיטה מבוססת על תורת המראות של הבעל שם טוב לפיה המציאות שלנו היא השתקפות של העולם הפנימי שלנו, וכל קושי ומכאוב שהופיע בחיינו, נועד לגדל ולהצמיח אותנו וטמונה בו מתנה עבורנו.  
-</p>
-        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-2')">קרא עוד</button>
+        <p>השיטה מבוססת על תורת המראות של הבעל שם טוב לפיה המציאות שלנו היא השתקפות של העולם הפנימי שלנו, וכל קושי ומכאוב שמופיע בחיינו, נועד לגדל ולהצמיח אותנו וטמונה בו מתנה עבורנו. </p>
+        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-2')">קראי עוד</button>
         <div id="more-content-2" class="expanded-content">
-          <p>בתהליך הריפוי נעבור דרך שלושת השלבים המתקיימים בכל תהליך רוחני -
-'הכנעה' קבלת הבעיה או המצוקה
-'הבדלה' הפרדה והבדלת הבעיה מאיתנו 
-'המתקה' הפיכה של המצוקה למצמיחה 
+          <p>בתהליך הריפוי נעבור דרך שלושת השלבים המתקיימים בכל תהליך רוחני :
+'הכנעה' - קבלת הבעיה; 'הבדלה'- הפרדה והבדלת הבעיה מאיתנו; 'המתקה' - הפיכה של המצוקה למצמיחה. 
 הטיפול מתבצע בשיחה בשילוב כלים מעולם הפסיכותרפיה (כתיבה, קלפים, משחק, ציור ועוד) 
-הטיפול מסייע במצבים של קשרים חברתיים, דיכאון, אתגרי  גיל ההתבגרות, בניית העצמי, חוסר ביטחון, חרדות, מצבי לחץ, מערכות יחסים ועוד. 
+מסייע במצבים של קשיים חברתיים, דיכאון, אתגרי  גיל ההתבגרות, בניית העצמי, חוסר ביטחון, חרדות, מצבי לחץ, מערכות יחסים ועוד. 
 </p>
         </div>
       </div>
@@ -522,15 +528,12 @@
       <div class="treatment-card">
         <img src="תנועות_עיניים_2.jpg" alt="תרפיה בתנועות עיניים (EMID)" class="treatment-img" loading="lazy">
         <h3 class="treatment-title">תרפיה בתנועות עיניים (EMID)</h3>
-        <p>
-הרבה דפוסים והרגלים מוטמעים ונרשמים בגוף שלנו מחוויות העבר
-שינוי הרגלים או דפוסים הוא מורכב מאד, ולפעמים אפילו בלתי אפשרי, גם כשאנו מודעים אליהם, מכיון שדפוסים אלו נצרבו לנו בתת מודע בעקבות זיכרונות ואירועים שחווינו. 
-באמצעות תנועות עיניים נציף את הזכרון ונקודד אותו מחדש במוח. הזיכרון ישאר אבל הדפוס כבר לא יפעיל אותנו רגשית  
+        <p>הרבה דפוסים והרגלים מוטמעים ונרשמים בגוף שלנו  בעקבות חוויות העבר, ולכן שינוי הרגלים או דפוסים הוא  תהליך מורכב, ולפעמים אפילו בלתי אפשרי, גם כאשר אנו מודעים אליהם. 
+באמצעות תנועות עיניים נציף את הזיכרון ונקודד אותו מחדש במוח. הזיכרון יישאר אבל הדפוס כבר לא יפעיל אותנו רגשית  
 </p>
-        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-3')">קרא עוד</button>
-        <div id="more-content-3" class="expanded-content">
-          <p>הטיפול מתבצע באמצעות הנחיה לתנועות עיניים, על פי פרוטוקולים מדויקים.   
-הטיפול מסייע במצבים של דיכאון, פוביות, חרדות, טראומות, פגיעות, דפוסי התנהגות ועוד.   
+        <button class="read-more-btn" onclick="toggleContent(this, 'more-content-3')">קראי עוד</button>
+        <div id="more-content-3" class="expanded-content">הטיפול מתבצע באמצעות הנחיה לתנועות עיניים, על פי פרוטוקולים מדויקים.   
+ומסייע במצבים של דיכאון, פוביות, חרדות, טראומות, פגיעות, דפוסי התנהגות ועוד.    
 </p>
         </div>
       </div>
@@ -540,28 +543,28 @@
 <!-- סדנא -->
 <section class="sadna-section" style="background-color: #D8A9B4; color: #fff6ef; padding: 2rem 0;">
   <div class="container">
-    <img src="תמונה_סדנא_2.jpg" alt="סדנא" class="sadna-img" loading="lazy" 
-         style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1.5rem; border-radius: 10px;">
     
     <h3 class="sadna-title" style="color: #cb7286; text-align: center; margin-bottom: 1rem; font-size: 1.5rem;">
       סדנה
     </h3>
     
     <p style="margin-bottom: 1rem;font-size: 1.25rem;">
-      בנוסף לטיפולים בקליניקה, אני מנחה סדנה חווייתית המשלבת אימפרוביזציה, תנועה, דרמה, משחקיות וכלים יצירתיים.
-הסדנה מעודדת חיבור לגוף ולנפש, מסייעת בשחרור רגשות ומאפשרת ריפוי בדרך קלילה וחוויתית.
-הסדנה מחוברת לרוח הזמן ולמעגל השנה היהודי ומזמינה את המשתתפות לחוות תהליכי ההתפתחות אישית בהקשרים של מחזורי החיים והזמן.
-הסדנה מהווה הזדמנות לגעת במקומות פנימיים, לגלות פתרונות חדשים ולהעצים את הקשר עם עצמנו ועם הגוף. 
-ניתן להתאים את הסדנא לאירועים כמו מסיבת סיום, ערבי צוות, ימי גיבוש, ימי הולדת ועוד.
+בסדנאות שאני מנחה אני משלבת אימפרוביזציה, תנועה, דרמה, משחקיות וכלים יצירתיים.
+הסדנאות  מעודדות חיבור לגוף ולנפש, מסייעות בשחרור רגשות ומאפשרות ריפוי בדרך קלילה וחווייתית.
+הסדנאות מחוברות לרוח הזמן ולמעגל השנה היהודי ומזמינות  את המשתתפות לחוות תהליכי התפתחות אישית בהקשרים של מחזורי החיים והזמן.
+הסדנאות מאפשרות  לגעת במקומות פנימיים, לגלות פתרונות חדשים ולהעצים את הקשר עם עצמנו ועם הגוף. 
+ניתן להתאים את הסדנאות  לאירועים כמו מסיבת סיום, ערבי צוות, ימי גיבוש, ימי הולדת ועוד.
       </p>
+	<img src="תמונה_סדנא_2.jpg" alt="סדנא" class="sadna-img" loading="lazy" 
+         style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1.5rem; border-radius: 10px;">
+    
     </div>
   </div>
 </section>
 <!-- המלצות -->
 <section class="testimonials-section" style="background-color: #Cfe1dc; color: #676B5C; padding: 2rem 0;">
   <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
-    <h2 style="text-align: center; margin-bottom: 2rem;">המלצות</h2>
-
+  <!---כותרת: המלצות--->
     <div class="testimonials-grid" 
          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
       <!-- ממליצה 1 -->
@@ -625,9 +628,12 @@
 </section>
 <!-- פוטר -->
 <footer>
+  <p>לקבלת פרטים נוספים את מוזמנת לפנות אלי או למלא את הטופס המצורף,</p>
+  <p>ואשמח לחזור אלייך.</p>
   <p>בברכת אהבה</p>
-  <p>יעל כהן</p>
-  <p><a href="tel:0507688407">050-7688407</a></p>
+  <p>יעל</p>
+  <p>050-7688407</p>
+  <p>מוריס פישר 20 , ירושלים</p>
 </footer>
 <!-- כפתורי פעולה -->
 <section class="action-buttons">
