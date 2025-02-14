@@ -5,8 +5,8 @@ function toggleContent(btn, contentId) {
     expandedContent.classList.toggle('show');
 
     if (expandedContent.classList.contains('show')) {
-        btn.textContent = 'קרא פחות';
+        btn.textContent = 'קראי פחות';
     } else {
-        btn.textContent = 'קרא עוד';
+        btn.textContent = 'קראי עוד';
     }
 }
